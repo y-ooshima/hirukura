@@ -102,3 +102,12 @@
         width: 450px;
         margin: 30px;
     }
+
+    .edit-post-box{
+        background-color:#dbecef;
+        margin: 30px;
+    }
+
+    .edit-img{
+        width: 70%;
+    }
