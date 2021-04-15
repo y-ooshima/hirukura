@@ -1,6 +1,6 @@
 <header class="sticky-top">
-    <div clazss="row">
-        <nav class="navbar">
+    <div class="row">
+        <nav class="col-12 navbar">
             <a class="navbar-brand mx-5" href="{{ url('/home') }}">
                 <img src="/img/mainIcon.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 HIRUKURA</a>

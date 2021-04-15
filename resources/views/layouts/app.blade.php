@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> -->
 <html lang="ja">
 <head>
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
         @component('components.header')
         @endcomponent
 
