@@ -2,40 +2,32 @@
 
 @section('content')
 
-        <div clazss="row">
-            <nav class="navbar bg-primary">
-                <div class="col-12 d-flex align-items-center">
-                    <div class="navbar-nav">
-                        <ul class="nav mx-5">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/create') }}">レビュー投稿へ</a>
-                            </li>
-                        </ul>
+        <div class="row bg-primary">
+            <div class="col-12 my-3">
+                <div class="d-flex align-items-center">
+
+                    <div class="ml-3">
+                        <a class="btn btn-info text-white" href="{{ url('/create') }}">レビュー投稿へ</a>
                     </div>
 
-                    <div class="navbar-right mx-5">
-                        <select class="form-control-sm">
-                            <option>地域検索</option>
-                            <option>北海道</option>
-                            <option>東京</option>
-                            <option>富山</option>
-                            <option>大阪</option>
-                            <option>沖縄</option>
-                        </select>
-                    </div>
+                    <select class="form-control-sm ml-3">
+                        <option>地域検索</option>
+                        <option>北海道</option>
+                        <option>東京</option>
+                        <option>富山</option>
+                        <option>大阪</option>
+                        <option>沖縄</option>
+                    </select>
 
-                    <div class="navbar-right">
-                        <select class="form-control-sm">
-                            <option>並び替え</option>
-                            <option>総合評価</option>
-                            <option>難易度</option>
-                            <option>路面状況</option>
-                            <option>景色のよさ</option>
-                        </select>
-                    </div>
-                    
+                    <select class="form-control-sm ml-3">
+                        <option>並び替え</option>
+                        <option>総合評価</option>
+                        <option>難易度</option>
+                        <option>路面状況</option>
+                        <option>景色のよさ</option>
+                    </select>
                 </div>
-            </nav>
+            </div>
         </div>
 
             <div class="row mx-auto">
