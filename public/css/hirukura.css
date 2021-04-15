@@ -31,7 +31,7 @@
     color:#095580;
     text-align:center;
     font-weight:bold;
-    text-shadow:1px 1px 1px #ffffff;
+    text-shadow:1px 1px 1px white;
 }
 
 .float-contents-title{
@@ -66,18 +66,18 @@
 
 .navbar{
     background-color:#095580;
-    color:#FFF;
+    color:white;
     }
     
     .navbar-brand{
-    color:#FFF;
+    color:white;
     }
     .navbar-brand:hover{
     color:gray;
     }
     .nav-link{
-    color:#FFF;
-    border: 1px solid #FFF;
+    color:white;
+    border: 1px solid white;
     margin-left: 10px;
     }
 
@@ -92,13 +92,13 @@
     }
 
     .post-box{
-        background-color:lightblue;
+        background-color:#dbecef;
         width: 400px;
         margin: 30px;
     }
 
     .main-post-box{
-        background-color:lightblue;
+        background-color:#e6f3f7;
         width: 450px;
         margin: 30px;
     }
