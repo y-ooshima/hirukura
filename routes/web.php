@@ -38,3 +38,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('login.register');
 });
+
+Route::get('/re-enter', function () {
+    return view('login.re-enter');
+});

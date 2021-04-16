@@ -4,20 +4,12 @@
 
 <div id="login">
         
-        <h3 class="text-center text-info pt-5">新規会員登録</h3>
+        <h3 class="text-center text-info pt-5">パスワード再入力</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center mb-5">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
-                            <div class="form-group">
-                                <label for="username" class="text-info">氏名:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="e-mile" class="text-info">メールアドレス:</label><br>
-                                <input type="text" name="e-mile" id="e-mile" class="form-control">
-                            </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">パスワード:</label><br>
                                 <input type="text" name="password" id="password" class="form-control">

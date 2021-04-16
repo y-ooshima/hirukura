@@ -6,10 +6,10 @@
                 HIRUKURA</a>
                 <ul class="nav navbar-right mx-5">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">ログイン</a>
+                        <a class="nav-link active" href="{{ url('/login') }}">ログイン</a>
                     </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">新規登録</a>
+                    <a class="nav-link" href="{{ url('/register') }}">新規登録</a>
                 </li>
             </ul>
         </nav>

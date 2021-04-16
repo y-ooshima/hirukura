@@ -179,7 +179,7 @@
         <div class="row cv-area text-center">
                 <div class="col-12">
                     <p class="cv-text text-outline">\登録してシェアしよう/</p>
-                    <button type="button" class="btn btn-secondary">会員登録する</button>
+                    <a type="button" class="btn btn-secondary" href="{{ url('/login') }}">会員登録する</a>
                 </div>
         </div>
     </div>
