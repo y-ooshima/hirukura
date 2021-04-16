@@ -1,4 +1,4 @@
-<footer id="footer" class="fixed-bottom border-top bg-white">
+<footer id="footer" class="border-top bg-white">
     <div class="row">
         <nav class="col-12 navbar navbar-expand navbar-light bg-light">
             <div class="navbar-collapse justify-content-center" id="navbarNav">
