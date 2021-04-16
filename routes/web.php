@@ -30,3 +30,11 @@ Route::get('/edit', function () {
 Route::get('/create', function () {
     return view('review.create');
 });
+
+Route::get('/login', function () {
+    return view('login.login');
+});
+
+Route::get('/register', function () {
+    return view('login.register');
+});
