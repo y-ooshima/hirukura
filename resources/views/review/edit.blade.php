@@ -24,11 +24,11 @@
                     <p class="text-center m-2 pt-2 h3">
                             総合距離: **&nbsp;&nbsp;&nbsp;&nbsp;総合時間: ** 
                         </p>
-                    <img class="d-block edit-img mx-auto" width="400" alt="" src="/img/フリーアイコン.png">
+                    <img class="d-block edit-img mx-auto" alt="" src="/img/フリーアイコン.png">
 
                     <div class="row">
                         <div class="col-4 mx-auto">
-                            <p class="text-center p-3 h3">
+                            <p class="text-center p-3 h4">
                                 総合評価
                                 <br/>★★★★★
                                 <br/>難易度
@@ -41,10 +41,10 @@
                         </div>
 
                             <div class="col-8 text-left p-3">
-                                <p class="h3">
+                                <p class="h4">
                                 <ins>コメント</ins>
                                 </p>
-                                <p  class="h3">
+                                <p  class="h4">
                                     *****
                                     <br/>*****
                                     <br/>*****

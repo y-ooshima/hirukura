@@ -31,6 +31,14 @@ Route::get('/create', function () {
     return view('review.create');
 });
 
+Route::get('/mypage', function () {
+    return view('users.mypage');
+});
+
+Route::get('/users/edit', function () {
+    return view('users.edit');
+});
+
 Route::get('/login', function () {
     return view('login.login');
 });
