@@ -1,11 +1,11 @@
 <header class="sticky-top">
     <div class="row">
-        <nav class="col-12 navbar">
-            <a class="navbar-brand mx-5" href="{{ url('/home') }}">
-                <img src="/img/mainIcon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <nav class="col navbar">
+            <a class="navbar-brand ml-4" href="{{ url('/home') }}">
+                <img class="d-inline-block align-top" src="/img/mainIcon.png" width="30" height="30" alt="">
                 HIRUKURA
             </a>
-            <ul class="nav navbar-right mx-5">
+            <ul class="nav navbar-right mx-4">
                 <li class="nav-item hidden-xs-down">
                     <a class="nav-link p-1 active" href="{{ url('/login') }}">ログイン</a>
                 </li>
