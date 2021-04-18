@@ -97,13 +97,13 @@ html{
     .post-box{
         background-color:#dbecef;
         width: 400px;
-        margin: 30px;
+        margin: 10px;
     }
 
     .main-post-box{
-        background-color:#e6f3f7;
-        width: 450px;
-        margin: 30px;
+        background-color:#fff;
+        max-width: 330px;
+        margin: 20px;
     }
 
     .edit-post-box{
