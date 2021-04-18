@@ -35,8 +35,16 @@ Route::get('/mypage', function () {
     return view('users.mypage');
 });
 
+Route::get('/users/profile', function () {
+    return view('users.profile');
+});
+
 Route::get('/users/edit', function () {
     return view('users.edit');
+});
+
+Route::get('/users/create', function () {
+    return view('users.create');
 });
 
 Route::get('/login', function () {

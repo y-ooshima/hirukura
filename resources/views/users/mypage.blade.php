@@ -2,97 +2,89 @@
 
 @section('content')
 
-<div class="container d-flex justify-content-center mt-3">
-    <div class="w-50">
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+
         <h1>マイページ</h1>
 
         <hr>
 
-        <div class="container">
-            <div class="d-flex justify-content-between">
+        
+
+            <div class="form-group">
                 <div class="row">
-                    <div class="col-2 d-flex align-items-center">
-                        <i class="fas fa-user fa-3x"></i>
+                    <div class="col">
+                        <label for="name" class="text-md-left">氏名</label>
+                        <p class="text-center">**** ****</p>
                     </div>
-                    <div class="col-9 d-flex align-items-center ml-2 mt-3">
-                        <div class="d-flex flex-column">
-                            <label for="user-name">会員情報の編集</label>
-                            <p>アカウント情報の編集</p>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="name" class="text-md-left">メールアドレス</label>
+                        <p class="text-center">****＠****</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="name" class="text-md-left">地域</label>
+                        <p class="text-center">****</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="container mb-3">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                        <a type="button" class="btn btn-secondary" href="{{ url('/users/profile') }}">プロフィール編集へ</a>
                         </div>
                     </div>
                 </div>
-                <div class="d-flex align-items-center">
-                    <a href="{{ url('/users/edit') }}">
-                        編集
-                    </a>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                <a type="button" class="btn btn-secondary" href="{{ url('/users/edit') }}">過去投稿一覧へ</a>
                 </div>
             </div>
         </div>
 
         <hr>
 
-        <div class="container">
-            <div class="d-flex justify-content-between">
-                <div class="row">
-                    <div class="col-2 d-flex align-items-center">
-                        <i class="fas fa-archive fa-3x"></i>
+        <div class="container mb-3">
+
+            <div class="row">
+                    <div class="col text-center">
+                        <a href="{{ url('/re-enter') }}">
+                        パスワード変更
+                        </a>
                     </div>
-                    <div class="col-9 d-flex align-items-center ml-2 mt-3">
-                        <div class="d-flex flex-column">
-                            <label for="user-name">過去投稿一覧</label>
-                            <p>過去投稿一覧を確認できます</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center">
-                    <a href="{{ url('/create') }}">
-                        一覧へ
-                    </a>
                 </div>
             </div>
-        </div>
 
-        <hr>
-
-        <div class="container">
-            <div class="d-flex justify-content-between">
-                <div class="row">
-                    <div class="col-2 d-flex align-items-center">
-                        <i class="fas fa-sign-out-alt fa-3x"></i>
-                    </div>
-                    <div class="col-9 d-flex align-items-center ml-2 mt-3">
-                        <div class="d-flex flex-column">
-                            <label for="user-name">ログアウト</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center">
+            <div class="row">
+                <div class="col text-center">
                     <a href="{{ url('/') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        ログアウト
+                    ログアウト
                     </a>
 
                     <form id="logout-form" action="{{ url('/show') }}" method="POST" style="display: none;">
-                        @csrf
+                    @csrf
                     </form>
                 </div>
             </div>
         </div>
 
-        <hr>
-
-        <div class="container">
-            <div class="d-flex justify-content-between">
-                <div class="row">
-                    <div class="col-2 d-flex align-items-center">
-                        <i class="fas fa-sign-out-alt fa-3x"></i>
-                    </div>
-                    <div class="col-9 d-flex align-items-center ml-2 mt-3">
-                        <div class="d-flex flex-column">
-                            <label for="user-name">退会</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center">
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col text-center">
                     <a href="{{ url('/') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         退会
                     </a>
@@ -105,6 +97,7 @@
         </div>
 
         <hr>
+    
     </div>
 </div>
 
