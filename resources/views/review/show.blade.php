@@ -30,113 +30,149 @@
             </div>
         </div>
 
-            <div class="row mx-auto">
-                <div class="col p-0 post-box rounded">
+        <div class="row">
+                <div class="col-5 p-0 post-box rounded mx-auto">
                     <a style="text-decoration:none;" href="{{ url('/edit') }}">
-                        <p class="text-center m-2 pt-2 h4">
+                        <p class="text-center m-2 pt-2 h5">
                             ユーザー名
                         </p>
-                        <p class="text-left text-white p-2 bg-info h4">
+                        <p class="text-left text-white p-2 bg-info h5">
                             峠名: ** 
                         </p>
-                        <img class="d-block mx-auto" width="300"　alt="" src="/img/フリーアイコン.png">
-                        <div class="mx-auto">
-                            <div class="row">
-                                <div class="col-4">
-                                    <p class="text-center p-3">
-                                        総合評価
-                                        <br/>★★★★★
-                                        <br/>難易度
-                                        <br/>★★★★★
-                                        <br/>路面状況
-                                        <br/>★★★★★
-                                        <br/>景色
-                                        <br/>★★★★★
-                                    </p>
-                                </div>
-                                <div class="col-8">
-                                <p class="text-left p-3 m-0 h5"><ins>コメント</ins></p>
-                                    <p class="text-left h5">
-                                        *****
-                                        <br/>*****
-                                        <br/>*****
-                                    </p>
-                                </div>
+                        <img class="d-block mx-auto" width="200" alt="" src="/img/フリーアイコン.png">
+
+                        <div class="row mt-2">
+                            <div class="col-5 mx-auto d-none d-md-block">
+                                <p class="text-center pt-2">
+                                    総合評価
+                                    <br/>★★★★★
+                                    <br/>難易度
+                                    <br/>★★★★★
+                                    <br/>路面状況
+                                    <br/>★★★★★
+                                    <br/>景色
+                                    <br/>★★★★★
+                                </p>
+                            </div>
+                            <div class="col-sm-7">
+                                <p class="text-left p-3 m-0"><ins>コメント</ins></p>
+                                <p class="text-left pl-3">
+                                    *****
+                                    <br/>*****
+                                    <br/>*****
+                                </p>
                             </div>
                         </div>
                     </a>                    
                 </div>
 
-                <div class="col p-0 post-box rounded">
+                <div class="col-5 p-0 post-box rounded mx-auto">
                     <a style="text-decoration:none;" href="{{ url('/edit') }}">
-                        <p class="text-center m-2 pt-2 h4">
+                        <p class="text-center m-2 pt-2 h5">
                             ユーザー名
                         </p>
-                        <p class="text-left text-white p-2 bg-info h4">
+                        <p class="text-left text-white p-2 bg-info h5">
                             峠名: ** 
                         </p>
-                        <img class="d-block mx-auto" width="300"　alt="" src="/img/フリーアイコン.png">
-                        <div class="mx-auto">
-                            <div class="row">
-                                <div class="col-4">
-                                    <p class="text-center p-3">
-                                        総合評価
-                                        <br/>★★★★★
-                                        <br/>難易度
-                                        <br/>★★★★★
-                                        <br/>路面状況
-                                        <br/>★★★★★
-                                        <br/>景色
-                                        <br/>★★★★★
-                                    </p>
-                                </div>
-                                <div class="col-8">
-                                <p class="text-left p-3 m-0 h5"><ins>コメント</ins></p>
-                                    <p class="text-left h5">
-                                        *****
-                                        <br/>*****
-                                        <br/>*****
-                                    </p>
-                                </div>
+                        <img class="d-block mx-auto" width="200" alt="" src="/img/フリーアイコン.png">
+
+                        <div class="row mt-2">
+                            <div class="col-5 mx-auto d-none d-md-block">
+                                <p class="text-center pt-2">
+                                    総合評価
+                                    <br/>★★★★★
+                                    <br/>難易度
+                                    <br/>★★★★★
+                                    <br/>路面状況
+                                    <br/>★★★★★
+                                    <br/>景色
+                                    <br/>★★★★★
+                                </p>
+                            </div>
+                            <div class="col-sm-7">
+                                <p class="text-left p-3 m-0"><ins>コメント</ins></p>
+                                <p class="text-left pl-3">
+                                    *****
+                                    <br/>*****
+                                    <br/>*****
+                                </p>
                             </div>
                         </div>
                     </a>                    
                 </div>
 
-                <div class="col p-0 post-box rounded">
+                <div class="col-5 p-0 post-box rounded mx-auto">
                     <a style="text-decoration:none;" href="{{ url('/edit') }}">
-                        <p class="text-center m-2 pt-2 h4">
+                        <p class="text-center m-2 pt-2 h5">
                             ユーザー名
                         </p>
-                        <p class="text-left text-white p-2 bg-info h4">
+                        <p class="text-left text-white p-2 bg-info h5">
                             峠名: ** 
                         </p>
-                        <img class="d-block mx-auto" width="300"　alt="" src="/img/フリーアイコン.png">
-                        <div class="mx-auto">
-                            <div class="row">
-                                <div class="col-4">
-                                    <p class="text-center p-3">
-                                        総合評価
-                                        <br/>★★★★★
-                                        <br/>難易度
-                                        <br/>★★★★★
-                                        <br/>路面状況
-                                        <br/>★★★★★
-                                        <br/>景色
-                                        <br/>★★★★★
-                                    </p>
-                                </div>
-                                <div class="col-8">
-                                <p class="text-left p-3 m-0 h5"><ins>コメント</ins></p>
-                                    <p class="text-left h5">
-                                        *****
-                                        <br/>*****
-                                        <br/>*****
-                                    </p>
-                                </div>
+                        <img class="d-block mx-auto" width="200" alt="" src="/img/フリーアイコン.png">
+
+                        <div class="row mt-2">
+                            <div class="col-5 mx-auto d-none d-md-block">
+                                <p class="text-center pt-2">
+                                    総合評価
+                                    <br/>★★★★★
+                                    <br/>難易度
+                                    <br/>★★★★★
+                                    <br/>路面状況
+                                    <br/>★★★★★
+                                    <br/>景色
+                                    <br/>★★★★★
+                                </p>
+                            </div>
+                            <div class="col-sm-7">
+                                <p class="text-left p-3 m-0"><ins>コメント</ins></p>
+                                <p class="text-left pl-3">
+                                    *****
+                                    <br/>*****
+                                    <br/>*****
+                                </p>
                             </div>
                         </div>
                     </a>                    
                 </div>
+
+                <div class="col-5 p-0 post-box rounded mx-auto">
+                    <a style="text-decoration:none;" href="{{ url('/edit') }}">
+                        <p class="text-center m-2 pt-2 h5">
+                            ユーザー名
+                        </p>
+                        <p class="text-left text-white p-2 bg-info h5">
+                            峠名: ** 
+                        </p>
+                        <img class="d-block mx-auto" width="200" alt="" src="/img/フリーアイコン.png">
+
+                        <div class="row mt-2">
+                            <div class="col-5 mx-auto d-none d-md-block">
+                                <p class="text-center pt-2">
+                                    総合評価
+                                    <br/>★★★★★
+                                    <br/>難易度
+                                    <br/>★★★★★
+                                    <br/>路面状況
+                                    <br/>★★★★★
+                                    <br/>景色
+                                    <br/>★★★★★
+                                </p>
+                            </div>
+                            <div class="col-sm-7">
+                                <p class="text-left p-3 m-0"><ins>コメント</ins></p>
+                                <p class="text-left pl-3">
+                                    *****
+                                    <br/>*****
+                                    <br/>*****
+                                </p>
+                            </div>
+                        </div>
+                    </a>                    
+                </div>
+
+        </div>
+
+    <hr class="m-5">
 
 @endsection

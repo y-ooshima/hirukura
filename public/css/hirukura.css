@@ -96,8 +96,8 @@ html{
 
     .post-box{
         background-color:#dbecef;
-        width: 400px;
-        margin: 10px;
+        max-width: 300px;
+        margin: 30px;
     }
 
     .main-post-box{
