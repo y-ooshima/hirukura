@@ -6,11 +6,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8 mb-5">
             <span>
-                <a href="{{ url('/mypage') }}">マイページ</a> > <a href="{{ url('/users/edit') }}">過去記事一覧</a>> 過去記事編集
+                <a href="{{ url('/mypage') }}">マイページ</a> > <a href="{{ url('/users/edit') }}">過去記事一覧</a>> 過去投稿編集
             </span>
 
-            <h1 class="mt-3 mb-3">過去記事一覧</h1>
-
+            <h1 class="mt-3 mb-3">過去投稿編集</h1>
 
             <hr>
 
