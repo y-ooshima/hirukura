@@ -4,7 +4,7 @@
 
 <div id="login">
         
-        <h3 class="text-center text-info pt-5">新規会員登録</h3>
+    <h3 class="text-center text-info pt-5">新規会員登録</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center mb-5">
                 <div id="login-column" class="col-md-6">
@@ -30,12 +30,13 @@
                             <hr size="5">
 
                             <div class="form-group">
-                                <input type="送信" name="submit" class="btn btn-info btn-block" value="submit">
+                                <input type="submit" name="submit" class="btn btn-secondary btn-block" value="送信">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+    <hr class="m-5">
 </div>
 @endsection

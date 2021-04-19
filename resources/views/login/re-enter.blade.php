@@ -22,12 +22,13 @@
                             <hr size="5">
 
                             <div class="form-group">
-                                <input type="送信" name="submit" class="btn btn-info btn-block" value="submit">
+                                <input type="submit" name="submit" class="btn btn-secondary btn-block" value="送信">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+    <hr class="m-5">
 </div>
 @endsection

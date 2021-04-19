@@ -21,17 +21,17 @@
                             <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>次回から自動的にログインする</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                                 <hr size="5">
-                                <input type="submit" name="送信" class="btn btn-info btn-block" value="submit">
+                                <input type="submit" name="submit" class="btn btn-secondary btn-block" value="送信">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12 my-2">
+            <div class="row  m-2">
+                <div class="col-12">
                     <div id="register-link" class="text-center">
-                        <a href="{{ url('/show') }}" class="text-info">パスワードをお忘れの場合</a>
+                        <a href="{{ url('/re-enter') }}" class="text-info">パスワードをお忘れの場合</a>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
 
             <div class="row">
                 <div class="col-12 my-3">
-                    <div id="register-link" class="text-center">
+                    <div id="register-link" class="text-center mb-5">
                         <a href="{{ url('/register') }}" class="text-info">新規登録はこちらから</a>
                     </div>
                 </div>
