@@ -1,7 +1,7 @@
 <header class="sticky-top">
     <div class="row">
         <nav class="col navbar">
-            <a class="navbar-brand ml-4" href="{{ url('/home') }}">
+            <a class="navbar-brand ml-4" href="{{ url('/') }}">
                 <img class="d-inline-block align-top" src="/img/mainIcon.png" width="30" height="30" alt="">
                 HIRUKURA
             </a>
