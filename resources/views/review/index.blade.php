@@ -27,70 +27,52 @@
         </div>
     
         <div class="row postlist"> 
-            <div class="col p-0 main-post-box rounded mx-auto">
-                <a class="" href="{{ url('/edit') }}">
-                    <p class="text-center m-2 pt-2">
-                        ユーザー名
-                    </p>
-                    <p class="text-left bg-secondary text-white p-2">
-                        峠名: ** 
-                    </p>
-                    <img class="d-block mx-auto" width="150" alt="" src="/img/フリーアイコン.png">
-                    <div class="mx-auto">
-                        <p class="text-left p-3">
-                            コメント 
-                            <br/>*****
-                            <br/>*****
-                            <br/>*****
-                        </p>
+            <div class="card-deck mt-3 mx-auto" style="width:auto">
+                <div class="card" style="width:15rem;">
+                <h5 class="card-title mt-3">ユーザー名: ** </h5>
+                    <img class="card-img-top" src="/img/free-icon.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">峠名: ** </h5>
+                        <h6 class="card-subtitle text-muted">コメント</h6>
+                        <p class="card-text">...</p>
+                        <a href="{{ url('/edit') }}" class="card-link">詳細表示</a>
                     </div>
-                </a>
-            </div>
-
-            <div class="col p-0 main-post-box rounded mx-auto d-none d-md-block">
-                <a class="" href="{{ url('/edit') }}">
-                    <p class="text-center m-2 pt-2">
-                        ユーザー名
-                    </p>
-                    <p class="text-left bg-secondary text-white p-2">
-                        峠名: ** 
-                    </p>
-                    <img class="d-block mx-auto" width="150" alt="" src="/img/フリーアイコン.png">
-                    <div class="mx-auto">
-                        <p class="text-left p-3">
-                            コメント 
-                            <br/>*****
-                            <br/>*****
-                            <br/>*****
-                        </p>
+                </div>
+                <div class="card d-none d-sm-block" style="width:15rem;">
+                <h5 class="card-title mt-3">ユーザー名: ** </h5>
+                    <img class="card-img-top" src="/img/free-icon.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">峠名: ** </h5>
+                        <h6 class="card-subtitle text-muted">コメント</h6>
+                        <p class="card-text">...</p>
+                        <a href="{{ url('/edit') }}" class="card-link">詳細表示</a>
                     </div>
-                </a>
-            </div>
-
-            <div class="col p-0 main-post-box rounded mx-auto d-none d-lg-block">
-                <a class="" href="{{ url('/edit') }}">
-                    <p class="text-center m-2 pt-2">
-                        ユーザー名
-                    </p>
-                    <p class="text-left bg-secondary text-white p-2">
-                        峠名: ** 
-                    </p>
-                    <img class="d-block mx-auto" width="150" alt="" src="/img/フリーアイコン.png">
-                    <div class="mx-auto">
-                        <p class="text-left p-3">
-                            コメント 
-                            <br/>*****
-                            <br/>*****
-                            <br/>*****
-                        </p>
+                </div>
+                <div class="card d-none d-md-block" style="width:15rem;">
+                <h5 class="card-title mt-3">ユーザー名: ** </h5>
+                    <img class="card-img-top" src="/img/free-icon.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">峠名: ** </h5>
+                        <h6 class="card-subtitle text-muted">コメント</h6>
+                        <p class="card-text">...</p>
+                        <a href="{{ url('/edit') }}" class="card-link">詳細表示</a>
                     </div>
-                </a>
+                </div>
+                <div class="card d-none d-lg-block" style="width:15rem;">
+                <h5 class="card-title mt-3">ユーザー名: ** </h5>
+                    <img class="card-img-top" src="/img/free-icon.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">峠名: ** </h5>
+                        <h6 class="card-subtitle text-muted">コメント</h6>
+                        <p class="card-text">...</p>
+                        <a href="{{ url('/edit') }}" class="card-link">詳細表示</a>
+                    </div>
+                </div>
             </div>
-
         </div>
 
         <div class="row postlist">
-            <div class="col-12 text-center mb-3">
+            <div class="col-12 text-center my-3">
                 <a type="button" class="btn btn-secondary" href="{{ url('/show') }}">投稿をもっと見る</a>
             </div>
         </div>
