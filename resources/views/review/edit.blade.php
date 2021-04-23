@@ -17,7 +17,7 @@
             <div class="col card" style="width:15rem;">
             <h4 class="card-title text-center mt-3">ユーザー名: ** </h4>
             <h4 class="card-title text-center">峠名: ** </h4>
-                <img class="card-img-top d-block edit-img mx-auto" src="/img/フリーアイコン.png" alt="Card image cap">
+                <img class="card-img-top d-block edit-img mx-auto" src="/img/free_icon.png" alt="Card image cap">
                 <div class="card-body">
                 <h4 class="card-title text-center">総合距離: **&nbsp;&nbsp;&nbsp;&nbsp;総合時間: **</h4>
                     <h5 class="text-center p-3">

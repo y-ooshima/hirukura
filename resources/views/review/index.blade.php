@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12 p-0">
                 <div class="cath-text">
-                    <img class="d-block mx-auto" width="100%" src="img/4452717_m.jpg" />
+                    <img class="d-block mx-auto" width="100%" src="img/background_img.jpg" />
                     <p>情報をシェアして
                     <br/>とっておきの峠を見つけよう</p>
                 </div>
@@ -30,7 +30,7 @@
             <div class="card-deck mt-3 mx-auto" style="width:auto">
                 <div class="card" style="width:15rem;">
                 <h5 class="card-title mt-3">ユーザー名: ** </h5>
-                    <img class="card-img-top" src="/img/free-icon.png" alt="Card image cap">
+                    <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">峠名: ** </h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="card d-none d-sm-block" style="width:15rem;">
                 <h5 class="card-title mt-3">ユーザー名: ** </h5>
-                    <img class="card-img-top" src="/img/free-icon.png" alt="Card image cap">
+                    <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">峠名: ** </h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="card d-none d-md-block" style="width:15rem;">
                 <h5 class="card-title mt-3">ユーザー名: ** </h5>
-                    <img class="card-img-top" src="/img/free-icon.png" alt="Card image cap">
+                    <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">峠名: ** </h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="card d-none d-lg-block" style="width:15rem;">
                 <h5 class="card-title mt-3">ユーザー名: ** </h5>
-                    <img class="card-img-top" src="/img/free-icon.png" alt="Card image cap">
+                    <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">峠名: ** </h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="col d-none d-md-inline">
                         <div class="image-content text-center">
-                            <img class="" alt="" src="/img/目的地アイコン1.png">
+                            <img class="" alt="" src="/img/map_icon1.png">
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="row">
                     <div class="col d-none d-md-inline">
                         <div class="image-content text-center">
-                            <img class="" alt="" src="/img/目的地アイコン2.png">
+                            <img class="" alt="" src="/img/map_icon2.png">
                         </div>
                     </div>
                     <div class="col">
@@ -135,7 +135,7 @@
                     </div>
                     <div class="col d-none d-md-inline">
                         <div class="image-content text-center">
-                            <img class="" alt="" src="/img/コミュニケーションアイコン.png">
+                            <img class="" alt="" src="/img/memories_icon.png">
                         </div>
                     </div>
                 </div>

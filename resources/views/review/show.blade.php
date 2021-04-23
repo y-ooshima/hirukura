@@ -34,7 +34,7 @@
             <div class="card-deck mx-auto" style="width:auto">
                 <div class="col card" style="width:15rem;">
                 <h5 class="card-title mt-3">ユーザー名: ** </h5>
-                    <img class="card-img-top" src="/img/フリーアイコン.png" alt="Card image cap">
+                    <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">峠名: ** </h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col card" style="width:15rem;">
                 <h5 class="card-title mt-3">ユーザー名: ** </h5>
-                    <img class="card-img-top" src="/img/フリーアイコン.png" alt="Card image cap">
+                    <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">峠名: ** </h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="col card" style="width:15rem;">
                 <h5 class="card-title mt-3">ユーザー名: ** </h5>
-                    <img class="card-img-top" src="/img/フリーアイコン.png" alt="Card image cap">
+                    <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">峠名: ** </h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col card" style="width:15rem;">
                 <h5 class="card-title mt-3">ユーザー名: ** </h5>
-                    <img class="card-img-top" src="/img/フリーアイコン.png" alt="Card image cap">
+                    <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">峠名: ** </h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
