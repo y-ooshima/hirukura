@@ -58,3 +58,6 @@ Route::get('/register', function () {
 Route::get('/re-enter', function () {
     return view('login.re-enter');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
