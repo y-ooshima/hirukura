@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="name" class="text-md-left">氏名</label>
-                        <input type="text" class="form-control" placeholder="名前">
+                        <input type="text" class="form-control" value="{{Auth::user()->name }}">
                     </div>
                 </div>
 
@@ -29,16 +29,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="name" class="text-md-left">メールアドレス</label>
-                        <input type="text" class="form-control" placeholder="メールアドレス">
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="row mb-5">
-                    <div class="col">
-                        <label for="name" class="text-md-left">地域</label>
-                        <input type="text" class="form-control" placeholder="地域">
+                        <input type="text" class="form-control" value="{{Auth::user()->email }}">
                     </div>
                 </div>
 

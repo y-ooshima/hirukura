@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="name" class="text-md-left">氏名</label>
-                        <p class="text-center">**** ****</p>
+                        <p class="text-center">{{Auth::user()->name }}</p>
                     </div>
                 </div>
 
@@ -25,16 +25,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="name" class="text-md-left">メールアドレス</label>
-                        <p class="text-center">****＠****</p>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="row">
-                    <div class="col">
-                        <label for="name" class="text-md-left">地域</label>
-                        <p class="text-center">****</p>
+                        <p class="text-center">{{Auth::user()->email }}</p>
                     </div>
                 </div>
 
