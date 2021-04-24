@@ -6,10 +6,6 @@
             <div class="col-12 my-3">
                 <div class="d-flex align-items-center">
 
-                    <div class="ml-3">
-                        <a class="btn btn-info text-white" href="{{ url('/create') }}">レビュー投稿へ</a>
-                    </div>
-
                     <select class="form-control-sm ml-3">
                         <option>地域検索</option>
                         <option>北海道</option>
