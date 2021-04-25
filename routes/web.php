@@ -31,10 +31,6 @@ Route::get('/create', function () {
     return view('review.create');
 });
 
-Route::get('/mypage', function () {
-    return view('users.mypage');
-});
-
 Route::get('/users/profile', function () {
     return view('users.profile');
 });
@@ -58,6 +54,11 @@ Route::get('/register', function () {
 Route::get('/re-enter', function () {
     return view('login.re-enter');
 });
+
+Route::get('/mypage', 'UserController@mypage')->name('mypage');
+Route::get('/mypage/profile', 'UserController@edit')->name('mypage.edit');
+Route::put('users/mypage', 'UserController@update')->name('mypage.update');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

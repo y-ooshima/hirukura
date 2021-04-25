@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function mypage()
+    {
+        $user = Auth::user();
+        return view('users.mypage', compact('user'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -57,7 +63,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        //ビューへ渡して表示
+        $user = Auth::user();
+        return view('users.profile', compact('user'));
     }
 
     /**
@@ -69,7 +77,13 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user = Auth::user();
+        
+        $user->name = $request->input('name') ? $request->input('name') : $user->name;
+        $user->email = $request->input('email') ? $request->input('email') : $user->email;
+        $user->update();
+        
+        return redirect()->route('mypage');
     }
 
     /**

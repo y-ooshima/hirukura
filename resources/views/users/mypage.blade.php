@@ -34,7 +34,7 @@
                 <div class="container mb-3">
                     <div class="row">
                         <div class="col-12 text-center">
-                        <a type="button" class="btn btn-secondary" href="{{ url('/users/profile') }}">プロフィール編集へ</a>
+                        <a type="button" class="btn btn-secondary" href="{{route('mypage.edit')}}">プロフィール編集へ</a>
                         </div>
                     </div>
                 </div>
