@@ -53,7 +53,7 @@
 
             <div class="row">
                     <div class="col text-center">
-                        <a href="{{ url('/re-enter') }}">
+                        <a href="{{ route('mypage.edit_password') }}">
                         パスワード変更
                         </a>
                     </div>
