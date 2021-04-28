@@ -2,6 +2,10 @@
 
 @section('content')
 
+@if (session('status'))
+    {{ session('status') }} 
+@endif
+
 <div class="container">
     <div class="row justify-content-center mt-5">
         <div class="col-md-6">
@@ -74,15 +78,12 @@
 
         <div class="container mb-5">
             <div class="row">
-                <div class="col text-center">
-                    <a href="{{ url('/') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        退会
-                    </a>
 
-                    <form id="logout-form" action="{{ url('/show') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </div>
+            <form action='{{ route('article_delete') }}' method='post'>
+                {{ csrf_field() }}
+                    <input type='submit' value='退会'>
+            </form>
+
             </div>
         </div>
 

@@ -115,4 +115,17 @@ class UserController extends Controller
 
         return redirect()->route('mypage');
     }
+
+    // public function delete(Request $request)
+    // {
+    //     $article = Auth::user($request->id);
+    //     return view('article.delete', ['article' => $article]); 
+    // }
+
+    public function delete(Request $request)
+    {
+        $article = Auth::user($request->id);
+        $article->delete();
+        return redirect('/');
+    }
 }
