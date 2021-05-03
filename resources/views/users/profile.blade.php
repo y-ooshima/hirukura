@@ -20,7 +20,15 @@
                 <div class="row">
                     <div class="col">
                         <label for="name" class="text-md-left">氏名</label>
-                        <input type="text" class="form-control" placeholder="名前">
+                        <div class="">
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus>
+
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>氏名を入力してください</strong>
+                            </span>
+                            @enderror
+                        </div>
                     </div>
                 </div>
 
@@ -29,16 +37,15 @@
                 <div class="row">
                     <div class="col">
                         <label for="name" class="text-md-left">メールアドレス</label>
-                        <input type="text" class="form-control" placeholder="メールアドレス">
-                    </div>
-                </div>
+                        <div class="">
+                            <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email" autofocus>
 
-                <hr>
-
-                <div class="row mb-5">
-                    <div class="col">
-                        <label for="name" class="text-md-left">地域</label>
-                        <input type="text" class="form-control" placeholder="地域">
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>メールアドレスを入力してください</strong>
+                            </span>
+                            @enderror
+                        </div>
                     </div>
                 </div>
 
@@ -52,5 +59,6 @@
         </div>
     </div>
 </div>
+
 
 @endsection

@@ -31,10 +31,6 @@ Route::get('/create', function () {
     return view('review.create');
 });
 
-Route::get('/mypage', function () {
-    return view('users.mypage');
-});
-
 Route::get('/users/profile', function () {
     return view('users.profile');
 });
@@ -58,3 +54,17 @@ Route::get('/register', function () {
 Route::get('/re-enter', function () {
     return view('login.re-enter');
 });
+
+Route::get('/mypage', 'UserController@mypage')->name('mypage');
+Route::get('/mypage/profile', 'UserController@edit')->name('mypage.edit');
+Route::put('users/mypage', 'UserController@update')->name('mypage.update');
+Route::get('users/mypage/password/edit', 'UserController@edit_password')->name('mypage.edit_password');
+Route::put('users/mypage/password', 'UserController@update_password')->name('mypage.update_password');
+Route::delete('users/mypage/delete', 'UserController@destroy')->name('mypage.destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/article/delete', 'UserController@delete')->name('article_delete');
+// Route::post('/article/remove', 'UserController@remove')->name('article_remove');
