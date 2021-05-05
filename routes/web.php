@@ -67,4 +67,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/article/delete', 'UserController@delete')->name('article_delete');
-// Route::post('/article/remove', 'UserController@remove')->name('article_remove');
+
+Route::resource('administrator', 'hillclimb_locationController');

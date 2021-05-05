@@ -16,10 +16,9 @@ class CreateHillclimbLocationsTable extends Migration
         Schema::create('hillclimb_locations', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('locations_name');
-            $table->string('prefectures');
-            $table->integer('prefectures_id');
-            
+            $table->string('name');
+            $table->string('prefecture');
+
             $table->timestamps();
         });
     }
