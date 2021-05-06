@@ -13,11 +13,30 @@
 
             <hr>
 
+
+            <form action="/post" method="POST" enctype="multipart/form-data" class="post_form">
+    <div class="form-group">
+        <label for="exampleFormControlFile1">ファイル</label>
+        <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">キャプション</label>
+        <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    {{ csrf_field() }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
             <form>
                 <div class="row justify-content-center my-5">
                     <div class="col-8">
                         <div class="">
                             <label for="file">峠検索</label>
+                            <select class="form-control-sm ml-3">
+                                <option>地域検索</option>
+                                @foreach($hillclimb_locations as $post)
+                                    <option href="/administrator/{{ $post->id }}">{{ $post->name }}</option>
+                                @endforeach
                         </div>
                     </div>
                     <div class="col-8">

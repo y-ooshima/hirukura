@@ -27,9 +27,11 @@ Route::get('/edit', function () {
     return view('review.edit');
 });
 
-Route::get('/create', function () {
-    return view('review.create');
-});
+// Route::get('/create', function () {
+//     return view('review.create');
+// });
+
+Route::get('/create', 'PostController@index');
 
 Route::get('/users/profile', function () {
     return view('users.profile');

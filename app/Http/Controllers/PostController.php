@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\hillclimb_locations;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,7 +15,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $hillclimb_locations = hillclimb_locations::all();
+
+        return view('users.create', compact('hillclimb_locations'));
     }
 
     /**
