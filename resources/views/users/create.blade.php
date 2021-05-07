@@ -2,6 +2,22 @@
 
 @section('content')
 
+<form method="POST" action="/posts">
+    {{ csrf_field() }}
+    <input type="text" name="user_id">
+    <input type="text" name="hillclimb_location_id">
+    <input type="text" name="comment">
+    <input type="text" name="image_path">
+    <input type="text" name="evaluation_point">
+    <input type="text" name="difficulty_point">
+    <input type="text" name="scenery_point">
+    <input type="text" name="road_surface_point">
+    <input type="text" name="mileage">
+    <input type="text" name="running_time">
+    <input type="text" name="climbing_day">
+    <input type="submit">
+</form>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 mb-5">

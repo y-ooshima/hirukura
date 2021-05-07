@@ -38,7 +38,22 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post->user_id = $request->input('user_id');
+        $post->hillclimb_location_id = $request->input('hillclimb_location_id');
+        $post->comment = $request->input('comment');
+        $post->image_path = $request->input('image_path');
+        $post->evaluation_point = $request->input('evaluation_point');
+        $post->difficulty_point = $request->input('difficulty_point');
+        $post->scenery_point = $request->input('scenery_point');
+        $post->road_surface_point = $request->input('road_surface_point');
+        $post->mileage = $request->input('mileage');
+        $post->running_time = $request->input('running_time');
+        $post->climbing_day = $request->input('climbing_day');
+
+        $post->save();
+
+        return redirect()->route('posts.show', ['id' => $post->id]);
     }
 
     /**
@@ -47,9 +62,11 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        return view('posts.show', compact('post'));
     }
 
     /**

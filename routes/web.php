@@ -31,7 +31,10 @@ Route::get('/edit', function () {
 //     return view('review.create');
 // });
 
-Route::get('/create', 'PostController@index');
+Route::get('/posts', 'PostController@index');
+Route::get('/posts/create', 'PostController@create');//->name('posts.create')
+Route::post('/posts', 'PostController@store');//->name('posts.store')
+Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
 
 Route::get('/users/profile', function () {
     return view('users.profile');

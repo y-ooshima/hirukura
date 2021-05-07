@@ -15,7 +15,6 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-
             $table->integer('user_id')->unsigned()->default(0);
             $table->integer('hillclimb_location_id')->unsigned()->default(0);
             $table->text('comment')->default('');
@@ -24,8 +23,8 @@ class CreatePostsTable extends Migration
             $table->integer('difficulty_point')->unsigned()->default(1);
             $table->integer('scenery_point')->unsigned()->default(1);
             $table->integer('road_surface_point')->unsigned()->default(1);
-            $table->time('road_surface');
-            $table->time('running_time');
+            $table->text('mileage')->default('');
+            $table->integer('running_time')->unsigned()->default(0);
             $table->date('climbing_day');
 
             $table->timestamps();
