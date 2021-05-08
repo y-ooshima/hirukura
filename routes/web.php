@@ -35,6 +35,9 @@ Route::get('/posts', 'PostController@index');
 Route::get('/posts/create', 'PostController@create');//->name('posts.create')
 Route::post('/posts', 'PostController@store');//->name('posts.store')
 Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
+Route::get('/posts/{id}/edit', 'PostController@edit')->name('posts.edit');
+Route::put('/posts/{id}', 'PostController@update')->name('posts.update');
+Route::delete('/posts/{id}', 'PostController@destroy')->name('posts.destroy');
 
 Route::get('/users/profile', function () {
     return view('users.profile');

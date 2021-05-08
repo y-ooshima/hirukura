@@ -17,7 +17,7 @@ class PostController extends Controller
     {
         $hillclimb_locations = hillclimb_locations::all();
 
-        return view('users.create', compact('hillclimb_locations'));
+        return view('review.create', compact('hillclimb_locations'));
     }
 
     /**
@@ -75,9 +75,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -87,9 +88,17 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $id)
     {
-        //
+        $update = [
+            'comment' => $request->comment,
+        ];
+        Post::where('id', $id)->update($update);
+        return back();
+        // $post->comment = $request->input('comment');
+        // $post->update();
+
+        // return redirect()->route('posts.show', ['id' => $post->id]);
     }
 
     /**
@@ -98,8 +107,11 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        Post::where('id', $id)->delete();
+        
+        $hillclimb_locations = hillclimb_locations::all();
+        return view('review.create', compact('hillclimb_locations'));
     }
 }

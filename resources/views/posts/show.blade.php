@@ -41,7 +41,12 @@
                         </div>
 
                         <div class="col-12 text-center mb-3">
-                            <a type="button" class="btn btn-secondary" href="{{ url('/users/create') }}">編集</a>
+                            <a type="button" class="btn btn-secondary" href="/posts/{{ $post->id }}/edit">編集</a>
+                            <form action="/posts/{{ $post->id }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" name="" value="削除">
+                            </form>
                         </div>
                     </div>
                 </div>
