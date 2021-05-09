@@ -92,13 +92,17 @@ class PostController extends Controller
     {
         $update = [
             'comment' => $request->comment,
+            'image_path' => $request->image_path,
+            'evaluation_point' => $request->evaluation_point,
+            'difficulty_point' => $request->difficulty_point,
+            'road_surface_point' => $request->road_surface_point,
+            'mileage' => $request->mileage,
+            'running_time' => $request->running_time,
+            'climbing_day' => $request->climbing_day,
         ];
         Post::where('id', $id)->update($update);
         return back();
-        // $post->comment = $request->input('comment');
-        // $post->update();
 
-        // return redirect()->route('posts.show', ['id' => $post->id]);
     }
 
     /**

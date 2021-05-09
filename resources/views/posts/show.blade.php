@@ -19,10 +19,13 @@
                         <img class="card-img-top d-block edit-img mx-auto" src="/img/free_icon.png" alt="Card image cap">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-12">
+                                    <h5 class="card-title text-center">登った日:</br> {{ $post->climbing_day }}</h5>
+                                </div>
+                                <div class="col-12">
                                     <h5 class="card-title text-center">走行距離:</br> {{ $post->mileage }}km</h5>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-12">
                                     <h5 class="card-title text-center">走行時間:</br> {{ $post->running_time }}h</h5>
                                 </div>
                             </div>
@@ -39,14 +42,17 @@
                             <h5 class="card-subtitle text-muted">コメント</h5>
                             <p class="card-text">{{ $post->comment }}</p>
                         </div>
-
-                        <div class="col-12 text-center mb-3">
-                            <a type="button" class="btn btn-secondary" href="/posts/{{ $post->id }}/edit">編集</a>
-                            <form action="/posts/{{ $post->id }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <input type="submit" name="" value="削除">
-                            </form>
+                        <div class="row mb-3">
+                            <div class="col-6 text-center">
+                                <a type="button" class="btn btn-secondary" href="/posts/{{ $post->id }}/edit">編集</a>
+                            </div>
+                            <div class="col-6 text-center">
+                                <form action="/posts/{{ $post->id }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="submit" class="btn btn-secondary" name="" value="削除">
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
