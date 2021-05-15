@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\User;
 use App\hillclimb_locations;
 use Illuminate\Http\Request;
 
@@ -15,9 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $hillclimb_locations = hillclimb_locations::all();
-
-        return view('review.create', compact('hillclimb_locations'));
+        //
     }
 
     /**
@@ -27,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $hillclimb_locations = hillclimb_locations::all();
+        return view('review.create', compact('hillclimb_locations'));
     }
 
     /**
@@ -66,7 +66,13 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        return view('posts.show', compact('post'));
+        $user_id = $post->user_id;
+        $user = User::findOrFail($user_id);
+
+        $hillclimb_location_id = $post->hillclimb_location_id;
+        $hillclimb_location = hillclimb_locations::findOrFail($hillclimb_location_id);
+
+        return view('posts.show', compact('post','hillclimb_location','user'));
     }
 
     /**
@@ -117,5 +123,20 @@ class PostController extends Controller
         
         $hillclimb_locations = hillclimb_locations::all();
         return view('review.create', compact('hillclimb_locations'));
+    }
+
+    public function getAddressByPostalCode(Request $request)
+    {
+        //$addresses = hillclimb_locations::where('name', $postalCode)->groupBy('prefecture')->pluck('prefecture');
+        //return view('posts.edit', compact('post'));
+
+        //return response()->json($post);
+        $data = $request->all();//データ読み取り
+        $message = $data['text'];
+        //$addresses = hillclimb_locations::where('prefecture', $message)->get();
+        $addresses = hillclimb_locations::where('prefecture', $message)->groupBy('name')->pluck('name');
+        
+        return response()->json($addresses);
+
     }
 }

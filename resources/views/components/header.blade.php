@@ -17,7 +17,7 @@
             @else
             <ul class="nav navbar-right mx-2">
                 <li class="nav-item hidden-xs-down">
-                    <a class="nav-link bg-info p-1" href="{{ url('/posts') }}">レビュー投稿へ</a>
+                    <a class="nav-link bg-info p-1" href="{{ url('/posts/create') }}">レビュー投稿へ</a>
                 </li>
                 <li class="nav-item hidden-xs-down">
                     <a class="nav-link p-1" href="{{ url('/mypage') }}">{{Auth::user()->name }}さん</a>

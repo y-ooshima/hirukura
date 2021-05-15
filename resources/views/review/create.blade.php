@@ -31,6 +31,66 @@
                                 <option value="{{ $post->id }}">{{ $post->name }}</option>
                             @endforeach
                         </select>
+                        <div class="form-group">
+                            <label for="postal_code">都道府県</label>
+                            <select class="form-control-sm ml-3" type="text" id="postal_code" name="postal_code">
+                                <option>地域選択</option>
+                                <option>北海道</option>
+                                <option>青森県</option>
+                                <option>岩手県</option>
+                                <option>宮城県</option>
+                                <option>秋田県</option>
+                                <option>山形県</option>
+                                <option>福島県</option>
+                                <option>茨城県</option>
+                                <option>群馬県</option>
+                                <option>埼玉県</option>
+                                <option>千葉県</option>
+                                <option>東京都</option>
+                                <option>神奈川県</option>
+                                <option>新潟県</option>
+                                <option>富山県</option>
+                                <option>石川県</option>
+                                <option>福井県</option>
+                                <option>山梨県</option>
+                                <option>長野県</option>
+                                <option>岐阜県</option>
+                                <option>静岡県</option>
+                                <option>愛知県</option>
+                                <option>三重県</option>
+                                <option>滋賀県</option>
+                                <option>京都府</option>
+                                <option>大阪府</option>
+                                <option>兵庫県</option>
+                                <option>奈良県</option>
+                                <option>和歌山県</option>
+                                <option>鳥取県</option>
+                                <option>島根県</option>
+                                <option>岡山県</option>
+                                <option>広島県</option>
+                                <option>山口県</option>
+                                <option>徳島県</option>
+                                <option>香川県</option>
+                                <option>愛知県</option>
+                                <option>高知県</option>
+                                <option>福岡県</option>
+                                <option>佐賀県</option>
+                                <option>長崎県</option>
+                                <option>熊本県</option>
+                                <option>大分県</option>
+                                <option>宮崎県</option>
+                                <option>鹿児島県</option>
+                                <option>沖縄県</option>
+                                                
+                            </select>
+
+                            <button type="button" id="get_address">住所検索</button>
+
+                            <label for="postal_code">峠名</label>
+                            <select class="form-control-sm ml-3 car_model" name="car_model">
+                                <option class="">峠選択</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -183,5 +243,60 @@
         </div>
     </div>
 </div>
+
+<hr class="m-5">
+
+<script type="text/javascript">
+    /* Ajax通信開始 */
+    $('#get_address').on('click', function(){
+        $.ajaxSetup({ 
+            headers: { 
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') 
+            } //Headersを書き忘れるとエラーになる
+        }); 
+
+        let postal_code = $('#postal_code').val();//都道府県サーチ
+        console.log(postal_code);
+        if (!postal_code) {
+            alert("文字を未入力");
+            return false;
+        } //ガード節で検索ワードが空の時、ここで処理を終了
+
+        $.ajax({
+            type: 'POST',
+            url: "/searching",//後述するweb.phpのURLと同じ形にする
+             data: {
+                'text': postal_code //ここはサーバーに贈りたい情報。今回は検索ファームのバリューを送りたい。
+             },
+            dataType: 'json',
+            timeout: 3000
+        })
+
+        /* 成功時 */
+        .done(function(data){
+            //alert("通信に成功しました");
+            $('#addresses').val(data);
+            console.log(data);
+
+            $('.car_model option').remove();
+
+            // $.each(data, function(name){
+            //   $('.car_model').append($('<option>').text(name));
+            // });
+
+            for( var i=0; i<data.length; i++) {
+            console.log( data[i] );
+            // $('.car_model').append($('<option>').text(data));
+            $('.car_model').append("<option>" + data[i] + "</option>");
+            }
+        })
+
+        /* 失敗時 */
+        .fail(function(data){
+            alert("通信に失敗しました");
+        });
+
+    });
+</script>
 
 @endsection
