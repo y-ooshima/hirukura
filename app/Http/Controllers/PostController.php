@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\User;
 use App\hillclimb_locations;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -39,11 +40,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
+        $user_id = Auth::user()->id;
+        
         $location_name = $request->input('location_name');
         $location_id = hillclimb_locations::where('name', $location_name)->value('id');
 
         $post = new Post();
-        $post->user_id = $request->input('user_id');
+        $post->user_id = $user_id;
         $post->hillclimb_location_id = $location_id;
         $post->comment = $request->input('comment');
         $post->image_path = $request->input('image_path');

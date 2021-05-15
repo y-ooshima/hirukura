@@ -16,7 +16,6 @@
                     <div class="col-8">
                         <label for="file">ユーザー名</label>
                         <p class="text-center">{{ Auth::user()->name }}</p>
-                        <input type="text" name="user_id" value="{{ Auth::user()->id }}"></br>
                     </div>
                 </div>
 
