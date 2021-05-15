@@ -38,9 +38,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
+        $location_name = $request->input('location_name');
+        $location_id = hillclimb_locations::where('name', $location_name)->value('id');
+
         $post = new Post();
         $post->user_id = $request->input('user_id');
-        $post->hillclimb_location_id = $request->input('hillclimb_location_id');
+        $post->hillclimb_location_id = $location_id;
         $post->comment = $request->input('comment');
         $post->image_path = $request->input('image_path');
         $post->evaluation_point = $request->input('evaluation_point');

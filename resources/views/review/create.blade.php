@@ -25,15 +25,10 @@
                 <div class="row justify-content-center my-5">
                     <div class="col-8">
                         <label for="file">峠検索</label>
-                        <select class="form-control-sm" name="hillclimb_location_id">
-                            <option>地域検索</option>
-                            @foreach($hillclimb_locations as $post)
-                                <option value="{{ $post->id }}">{{ $post->name }}</option>
-                            @endforeach
-                        </select>
+
                         <div class="form-group">
                             <label for="postal_code">都道府県</label>
-                            <select class="form-control-sm ml-3" type="text" id="postal_code" name="postal_code">
+                            <select class="form-control-sm ml-3" type="text" id="postal_code">
                                 <option>地域選択</option>
                                 <option>北海道</option>
                                 <option>青森県</option>
@@ -87,7 +82,7 @@
                             <button type="button" id="get_address">住所検索</button>
 
                             <label for="postal_code">峠名</label>
-                            <select class="form-control-sm ml-3 car_model" name="car_model">
+                            <select class="form-control-sm ml-3 car_model" name="location_name">
                                 <option class="">峠選択</option>
                             </select>
                         </div>
