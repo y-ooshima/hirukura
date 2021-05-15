@@ -26,62 +26,65 @@
                         <label for="file">峠検索</label>
 
                         <div class="form-group">
-                            <label for="postal_code">都道府県</label>
-                            <select class="form-control-sm ml-3" type="text" id="postal_code">
-                                <option>地域選択</option>
-                                <option>北海道</option>
-                                <option>青森県</option>
-                                <option>岩手県</option>
-                                <option>宮城県</option>
-                                <option>秋田県</option>
-                                <option>山形県</option>
-                                <option>福島県</option>
-                                <option>茨城県</option>
-                                <option>群馬県</option>
-                                <option>埼玉県</option>
-                                <option>千葉県</option>
-                                <option>東京都</option>
-                                <option>神奈川県</option>
-                                <option>新潟県</option>
-                                <option>富山県</option>
-                                <option>石川県</option>
-                                <option>福井県</option>
-                                <option>山梨県</option>
-                                <option>長野県</option>
-                                <option>岐阜県</option>
-                                <option>静岡県</option>
-                                <option>愛知県</option>
-                                <option>三重県</option>
-                                <option>滋賀県</option>
-                                <option>京都府</option>
-                                <option>大阪府</option>
-                                <option>兵庫県</option>
-                                <option>奈良県</option>
-                                <option>和歌山県</option>
-                                <option>鳥取県</option>
-                                <option>島根県</option>
-                                <option>岡山県</option>
-                                <option>広島県</option>
-                                <option>山口県</option>
-                                <option>徳島県</option>
-                                <option>香川県</option>
-                                <option>愛知県</option>
-                                <option>高知県</option>
-                                <option>福岡県</option>
-                                <option>佐賀県</option>
-                                <option>長崎県</option>
-                                <option>熊本県</option>
-                                <option>大分県</option>
-                                <option>宮崎県</option>
-                                <option>鹿児島県</option>
-                                <option>沖縄県</option>
-                                                
-                            </select>
+                            <label for="prefecture_code" class="col-8">都道府県選択</label>
+                            <div class="col-12">
+                                <select class="form-control-sm" type="text" id="prefecture_code">
+                                    <option>地域選択</option>
+                                    <option>北海道</option>
+                                    <option>青森県</option>
+                                    <option>岩手県</option>
+                                    <option>宮城県</option>
+                                    <option>秋田県</option>
+                                    <option>山形県</option>
+                                    <option>福島県</option>
+                                    <option>茨城県</option>
+                                    <option>群馬県</option>
+                                    <option>埼玉県</option>
+                                    <option>千葉県</option>
+                                    <option>東京都</option>
+                                    <option>神奈川県</option>
+                                    <option>新潟県</option>
+                                    <option>富山県</option>
+                                    <option>石川県</option>
+                                    <option>福井県</option>
+                                    <option>山梨県</option>
+                                    <option>長野県</option>
+                                    <option>岐阜県</option>
+                                    <option>静岡県</option>
+                                    <option>愛知県</option>
+                                    <option>三重県</option>
+                                    <option>滋賀県</option>
+                                    <option>京都府</option>
+                                    <option>大阪府</option>
+                                    <option>兵庫県</option>
+                                    <option>奈良県</option>
+                                    <option>和歌山県</option>
+                                    <option>鳥取県</option>
+                                    <option>島根県</option>
+                                    <option>岡山県</option>
+                                    <option>広島県</option>
+                                    <option>山口県</option>
+                                    <option>徳島県</option>
+                                    <option>香川県</option>
+                                    <option>愛知県</option>
+                                    <option>高知県</option>
+                                    <option>福岡県</option>
+                                    <option>佐賀県</option>
+                                    <option>長崎県</option>
+                                    <option>熊本県</option>
+                                    <option>大分県</option>
+                                    <option>宮崎県</option>
+                                    <option>鹿児島県</option>
+                                    <option>沖縄県</option>
+                                                    
+                                </select>
 
-                            <button type="button" id="get_address">住所検索</button>
+                                <button type="button" id="get_prefecture">峠検索</button>
 
-                            <label for="postal_code">峠名</label>
-                            <select class="form-control-sm ml-3 car_model" name="location_name">
+                            </div>
+
+                            <label for="prefecture_code" class="col-12">峠名(都道府県から選択してください)</label>
+                            <select class="form-control-sm col-12 locations_name" name="location_name">
                                 <option class="">峠選択</option>
                             </select>
                         </div>
@@ -240,18 +243,18 @@
 
 <hr class="m-5">
 
-<script type="text/javascript">
+<script>
     /* Ajax通信開始 */
-    $('#get_address').on('click', function(){
+    $('#get_prefecture').on('click', function(){
         $.ajaxSetup({ 
             headers: { 
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') 
             } //Headersを書き忘れるとエラーになる
         }); 
 
-        let postal_code = $('#postal_code').val();//都道府県サーチ
-        console.log(postal_code);
-        if (!postal_code) {
+        let prefecture_code = $('#prefecture_code').val();//都道府県サーチ
+        console.log(prefecture_code);
+        if (!prefecture_code) {
             alert("文字を未入力");
             return false;
         } //ガード節で検索ワードが空の時、ここで処理を終了
@@ -260,7 +263,7 @@
             type: 'POST',
             url: "/searching",//後述するweb.phpのURLと同じ形にする
              data: {
-                'text': postal_code //ここはサーバーに贈りたい情報。今回は検索ファームのバリューを送りたい。
+                'text': prefecture_code //ここはサーバーに贈りたい情報。今回は検索ファームのバリューを送りたい。
              },
             dataType: 'json',
             timeout: 3000
@@ -269,19 +272,11 @@
         /* 成功時 */
         .done(function(data){
             //alert("通信に成功しました");
-            $('#addresses').val(data);
-            console.log(data);
-
-            $('.car_model option').remove();
-
-            // $.each(data, function(name){
-            //   $('.car_model').append($('<option>').text(name));
-            // });
+            $('.locations_name option').remove();//リセット
 
             for( var i=0; i<data.length; i++) {
-            console.log( data[i] );
-            // $('.car_model').append($('<option>').text(data));
-            $('.car_model').append("<option>" + data[i] + "</option>");
+            //console.log( data[i] );
+            $('.locations_name').append("<option>" + data[i] + "</option>");
             }
         })
 

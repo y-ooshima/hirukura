@@ -41,7 +41,7 @@ class PostController extends Controller
     {
 
         $user_id = Auth::user()->id;
-        
+
         $location_name = $request->input('location_name');
         $location_id = hillclimb_locations::where('name', $location_name)->value('id');
 
@@ -134,16 +134,13 @@ class PostController extends Controller
 
     public function getAddressByPostalCode(Request $request)
     {
-        //$addresses = hillclimb_locations::where('name', $postalCode)->groupBy('prefecture')->pluck('prefecture');
-        //return view('posts.edit', compact('post'));
 
-        //return response()->json($post);
         $data = $request->all();//データ読み取り
-        $message = $data['text'];
-        //$addresses = hillclimb_locations::where('prefecture', $message)->get();
-        $addresses = hillclimb_locations::where('prefecture', $message)->groupBy('name')->pluck('name');
+        $location_name = $data['text'];
+
+        $locations_name = hillclimb_locations::where('prefecture', $location_name)->groupBy('name')->pluck('name');
         
-        return response()->json($addresses);
+        return response()->json($locations_name);
 
     }
 }
