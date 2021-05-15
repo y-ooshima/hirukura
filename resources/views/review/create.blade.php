@@ -12,14 +12,6 @@
 
             <form method="POST" action="/posts">
             {{ csrf_field() }}
-                <div class="row justify-content-center my-5">
-                    <div class="col-8">
-                        <label for="file">ユーザー名</label>
-                        <p class="text-center">{{ Auth::user()->name }}</p>
-                    </div>
-                </div>
-
-                <hr>
 
                 <div class="row justify-content-center my-5">
                     <div class="col-8">
