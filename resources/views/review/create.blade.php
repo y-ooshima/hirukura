@@ -88,8 +88,8 @@
                 <div class="row justify-content-center mt-3">
                     <div class="col-8">        
                         <div class="form-group">
-                            <label for="">画像選択(PNG,JPEGのみ)</label>
-                            <input type="file" name="image_path" accept="image/png, image/jpeg" />
+                            <label for="”image”">画像選択(PNG,JPEGのみ)</label>
+                            <input type="file" id=”image” name="image_path" accept="image/png, image/jpeg" />
                         </div>
                     </div>
                 </div>

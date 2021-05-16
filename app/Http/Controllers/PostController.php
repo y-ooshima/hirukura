@@ -138,7 +138,7 @@ class PostController extends Controller
         $data = $request->all();//データ読み取り
         $location_name = $data['text'];
 
-        $locations_name = hillclimb_locations::where('prefecture', $location_name)->groupBy('name')->pluck('name');
+        $locations_name = hillclimb_locations::where('prefecture', $location_name)->pluck('name');
         
         return response()->json($locations_name);
 
