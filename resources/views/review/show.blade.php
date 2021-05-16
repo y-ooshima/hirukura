@@ -13,6 +13,7 @@
                         <option>富山</option>
                         <option>大阪</option>
                         <option>沖縄</option>
+                        
                     </select>
 
                     <select class="form-control-sm ml-3">
