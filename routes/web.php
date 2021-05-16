@@ -76,7 +76,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/article/delete', 'UserController@delete')->name('article_delete');
 
-Route::resource('administrator', 'hillclimb_locationController');
-
 //ajax用
 Route::post('/searching', 'PostController@locations_search');
