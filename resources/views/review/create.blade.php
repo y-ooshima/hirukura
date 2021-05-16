@@ -15,7 +15,7 @@
 
                 <div class="row justify-content-center my-5">
                     <div class="col-8">
-                        <label for="file">峠検索</label>
+                        <label for="">峠検索</label>
 
                         <div class="form-group">
                             <label for="prefecture_code" class="col-8">都道府県選択</label>
@@ -75,7 +75,7 @@
 
                             </div>
 
-                            <label for="prefecture_code" class="col-12">峠名(都道府県から選択してください)</label>
+                            <label for="" class="col-12">峠名(都道府県から選択してください)</label>
                             <select class="form-control-sm col-12 locations_name" name="location_name">
                                 <option class="">峠選択</option>
                             </select>
@@ -88,8 +88,8 @@
                 <div class="row justify-content-center mt-3">
                     <div class="col-8">        
                         <div class="form-group">
-                            <label for="file1">画像選択</label>
-                            <input type="text" name="image_path">
+                            <label for="">画像選択(PNG,JPEGのみ)</label>
+                            <input type="file" name="image_path" accept="image/png, image/jpeg" />
                         </div>
                     </div>
                 </div>
@@ -98,17 +98,17 @@
 
                 <div class="row justify-content-center mt-3">
                     <div class="col-4">
-                        <label for="exampleInputEmail1">登った日</label>
+                        <label for="">登った日</label>
                         <input type="comment" class="form-control" name="climbing_day" placeholder="日付入力">
                     </div>
                 
                     <div class="col-4">
-                        <label for="exampleInputEmail1">走行距離(km)</label>
+                        <label for="">走行距離(km)</label>
                         <input type="comment" class="form-control" name="mileage" placeholder="走行距離入力">
                     </div>
 
                     <div class="col-4">
-                        <label for="exampleInputEmail1">走行時間(h)</label>
+                        <label for="">走行時間(h)</label>
                         <input type="comment" class="form-control" name="running_time" placeholder="走行時間入力">
                     </div>
                 </div>
@@ -120,23 +120,23 @@
                         <label>総合評価</label><br/>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="evaluation_point" id="evaluation_point1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="">1</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="evaluation_point" id="evaluation_point2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="">2</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="evaluation_point" id="evaluation_point3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <input class="form-check-input" type="radio" name="evaluation_point" id="evaluation_point3" value="3" checked>
+                            <label class="form-check-label" for="">3</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="evaluation_point" id="evaluation_point4" value="4">
-                            <label class="form-check-label" for="inlineRadio4">4</label>
+                            <label class="form-check-label" for="">4</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="evaluation_point" id="evaluation_point5" value="5">
-                            <label class="form-check-label" for="inlineRadio5">5</label>
+                            <label class="form-check-label" for="">5</label>
                         </div>
                     </div>
 
@@ -144,23 +144,23 @@
                         <label>難易度</label><br/>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="difficulty_point" id="difficulty_point1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="">1</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="difficulty_point" id="difficulty_point2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="">2</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="difficulty_point" id="difficulty_point3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <input class="form-check-input" type="radio" name="difficulty_point" id="difficulty_point3" value="3" checked>
+                            <label class="form-check-label" for="">3</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="difficulty_point" id="difficulty_point4" value="4">
-                            <label class="form-check-label" for="inlineRadio3">4</label>
+                            <label class="form-check-label" for="">4</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="difficulty_point" id="difficulty_point5" value="5">
-                            <label class="form-check-label" for="inlineRadio3">5</label>
+                            <label class="form-check-label" for="">5</label>
                         </div>
                     </div>
 
@@ -168,23 +168,23 @@
                         <label>景色のよさ</label><br/>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="scenery_point" id="scenery_point1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="">1</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="scenery_point" id="scenery_point2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="">2</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="scenery_point" id="scenery_point3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <input class="form-check-input" type="radio" name="scenery_point" id="scenery_point3" value="3" checked>
+                            <label class="form-check-label" for="">3</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="scenery_point" id="scenery_point4" value="4">
-                            <label class="form-check-label" for="inlineRadio3">4</label>
+                            <label class="form-check-label" for="">4</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="scenery_point" id="scenery_point5" value="5">
-                            <label class="form-check-label" for="inlineRadio3">5</label>
+                            <label class="form-check-label" for="">5</label>
                         </div>
                     </div>
 
@@ -192,23 +192,23 @@
                         <label>路面状況</label><br/>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="road_surface_point" id="road_surface_point1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+                            <label class="form-check-label" for="">1</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="road_surface_point" id="road_surface_point2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                            <label class="form-check-label" for="">2</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="road_surface_point" id="road_surface_point3" value="3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
+                            <input class="form-check-input" type="radio" name="road_surface_point" id="road_surface_point3" value="3" checked>
+                            <label class="form-check-label" for="">3</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="road_surface_point" id="road_surface_point4" value="4">
-                            <label class="form-check-label" for="inlineRadio3">4</label>
+                            <label class="form-check-label" for="">4</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="road_surface_point" id="road_surface_point5" value="5">
-                            <label class="form-check-label" for="inlineRadio3">5</label>
+                            <label class="form-check-label" for="">5</label>
                         </div>
                     </div>
                 </div>
@@ -217,7 +217,7 @@
 
                 <div class="row justify-content-center mt-3">
                     <div class="col-12">
-                        <label for="exampleInputEmail1">コメント</label>
+                        <label for="">コメント</label>
                         <textarea class="form-control" name="comment" rows="5" placeholder="コメントする"></textarea>
                     </div>
                 </div>
