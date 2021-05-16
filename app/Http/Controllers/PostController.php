@@ -132,7 +132,7 @@ class PostController extends Controller
         return view('review.create', compact('hillclimb_locations'));
     }
 
-    public function getAddressByPostalCode(Request $request)
+    public function locations_search(Request $request)
     {
 
         $data = $request->all();//データ読み取り

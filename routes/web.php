@@ -78,6 +78,5 @@ Route::post('/article/delete', 'UserController@delete')->name('article_delete');
 
 Route::resource('administrator', 'hillclimb_locationController');
 
-//Route::get('test/', 'PostController@getAddressByPostalCode');
-
-Route::post('/searching', 'PostController@getAddressByPostalCode');
+//ajax用
+Route::post('/searching', 'PostController@locations_search');
