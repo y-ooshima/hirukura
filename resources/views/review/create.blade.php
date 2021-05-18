@@ -76,7 +76,7 @@
                             </div>
 
                             <label for="" class="col-12">峠名(都道府県から選択してください)</label>
-                            <select class="form-control-sm col-12 locations_name" name="location_name">
+                            <select class="form-control-sm col-12 mountains_name" name="location_name">
                                 <option class="">峠選択</option>
                             </select>
                         </div>
@@ -264,11 +264,11 @@
         /* 成功時 */
         .done(function(data){
             //alert("通信に成功しました");
-            $('.locations_name option').remove();//リセット
+            $('.mountains_name option').remove();//リセット
 
             for( var i=0; i<data.length; i++) {
             //console.log( data[i] );
-            $('.locations_name').append("<option>" + data[i] + "</option>");
+            $('.mountains_name').append("<option>" + data[i] + "</option>");
             }
         })
 

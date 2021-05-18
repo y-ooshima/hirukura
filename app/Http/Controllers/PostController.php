@@ -27,8 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $hillclimb_locations = Mountains::all();
-        return view('review.create', compact('hillclimb_locations'));
+        return view('review.create');
     }
 
     /**
@@ -132,15 +131,15 @@ class PostController extends Controller
         return view('review.create', compact('hillclimb_locations'));
     }
 
-    public function locations_search(Request $request)
+    public function mountains_search(Request $request)
     {
 
         $data = $request->all();//データ読み取り
-        $location_name = $data['text'];
+        $prefecture_name = $data['text'];
 
-        $locations_name = Mountains::where('prefecture', $location_name)->pluck('name');
+        $mountain_name = Mountains::where('prefecture', $prefecture_name)->pluck('name');
         
-        return response()->json($locations_name);
+        return response()->json($mountain_name);
 
     }
 }
