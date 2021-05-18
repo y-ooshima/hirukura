@@ -24,26 +24,26 @@ class MountainsSeeder extends Seeder
 
       foreach ($header_menu_all as $result) {
         if(preg_match('/都|府|県|北海道/', $result)){
-          $PrefectureSearch = mb_substr($result->plaintext, -2);
-          if($PrefectureSearch == "県 "||$PrefectureSearch == "都 "||$PrefectureSearch == "府 "||$PrefectureSearch == "道 "){
-            $PrefectureInput = preg_replace("/( |　)/", "", $result->plaintext);
+          $prefecture_search = mb_substr($result->plaintext, -2);
+          if($prefecture_search == "県 "||$prefecture_search == "都 "||$prefecture_search == "府 "||$prefecture_search == "道 "){
+            $prefecture_Input = preg_replace("/( |　)/", "", $result->plaintext);
             continue;
           }else{
-            $MountainInput = $result->plaintext;
+            $mountain_Input = $result->plaintext;
           }
         }else{
-          $MountainInput = $result->plaintext;
-          if(preg_match('/TOP/', $MountainInput)){
-            $PrefectureInput = '';
-            $MountainInput = '';
+          $mountain_Input = $result->plaintext;
+          if(preg_match('/TOP/', $mountain_Input)){
+            $prefecture_Input = '';
+            $mountain_Input = '';
           }
         }
           
-        if($PrefectureInput !== '' && $MountainInput !== ''){
+        if($prefecture_Input !== '' && $mountain_Input !== ''){
           DB::table('mountains')->insert([
             [
-              'name' => $MountainInput,
-              'prefecture' => $PrefectureInput,
+              'name' => $mountain_Input,
+              'prefecture' => $prefecture_Input,
             ],
           ]);
         }
