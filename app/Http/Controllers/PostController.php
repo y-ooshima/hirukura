@@ -75,10 +75,10 @@ class PostController extends Controller
         $user_id = $post->user_id;
         $user = User::findOrFail($user_id);
 
-        $hillclimb_location_id = $post->hillclimb_location_id;
-        $hillclimb_location = Mountains::findOrFail($hillclimb_location_id);
+        $mountains_id = $post->hillclimb_location_id;
+        $mountains = Mountains::findOrFail($mountains_id);
 
-        return view('posts.show', compact('post','hillclimb_location','user'));
+        return view('posts.show', compact('post','mountains','user'));
     }
 
     /**
@@ -127,8 +127,8 @@ class PostController extends Controller
     {
         Post::where('id', $id)->delete();
         
-        $hillclimb_locations = Mountains::all();
-        return view('review.create', compact('hillclimb_locations'));
+        $mountains = Mountains::all();
+        return view('review.create', compact('mountains'));
     }
 
     public function mountains_search(Request $request)
