@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\User;
-use App\hillclimb_locations;
+use App\Mountains;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $hillclimb_locations = hillclimb_locations::all();
+        $hillclimb_locations = Mountains::all();
         return view('review.create', compact('hillclimb_locations'));
     }
 
@@ -43,7 +43,7 @@ class PostController extends Controller
         $user_id = Auth::user()->id;
 
         $location_name = $request->input('location_name');
-        $location_id = hillclimb_locations::where('name', $location_name)->value('id');
+        $location_id = Mountains::where('name', $location_name)->value('id');
 
         $post = new Post();
         $post->user_id = $user_id;
@@ -77,7 +77,7 @@ class PostController extends Controller
         $user = User::findOrFail($user_id);
 
         $hillclimb_location_id = $post->hillclimb_location_id;
-        $hillclimb_location = hillclimb_locations::findOrFail($hillclimb_location_id);
+        $hillclimb_location = Mountains::findOrFail($hillclimb_location_id);
 
         return view('posts.show', compact('post','hillclimb_location','user'));
     }
@@ -128,7 +128,7 @@ class PostController extends Controller
     {
         Post::where('id', $id)->delete();
         
-        $hillclimb_locations = hillclimb_locations::all();
+        $hillclimb_locations = Mountains::all();
         return view('review.create', compact('hillclimb_locations'));
     }
 
@@ -138,7 +138,7 @@ class PostController extends Controller
         $data = $request->all();//データ読み取り
         $location_name = $data['text'];
 
-        $locations_name = hillclimb_locations::where('prefecture', $location_name)->pluck('name');
+        $locations_name = Mountains::where('prefecture', $location_name)->pluck('name');
         
         return response()->json($locations_name);
 
