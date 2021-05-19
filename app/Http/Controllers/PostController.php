@@ -131,7 +131,7 @@ class PostController extends Controller
         return view('review.create', compact('mountains'));
     }
 
-    public function mountains_search(Request $request)
+    public function search(Request $request)
     {
 
         $data = $request->all();//データ読み取り

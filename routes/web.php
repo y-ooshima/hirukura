@@ -77,4 +77,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/article/delete', 'UserController@delete')->name('article_delete');
 
 //ajax用
-Route::post('/searching', 'PostController@mountains_search');
+Route::post('/searching', 'PostController@search');
