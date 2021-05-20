@@ -76,7 +76,7 @@
                             </div>
 
                             <label for="" class="col-12">峠名(都道府県から選択してください)</label>
-                            <select class="form-control-sm col-12 mountains_name" name="location_name">
+                            <select class="form-control-sm col-12 mountains_name" name="mountain_name">
                                 <option class="">峠選択</option>
                             </select>
                         </div>

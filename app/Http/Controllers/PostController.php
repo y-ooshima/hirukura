@@ -41,12 +41,12 @@ class PostController extends Controller
 
         $user_id = Auth::user()->id;
 
-        $location_name = $request->input('location_name');
-        $location_id = Mountains::where('name', $location_name)->value('id');
+        $mountain_name = $request->input('mountain_name');
+        $mountain_id = Mountains::where('name', $mountain_name)->value('id');
 
         $post = new Post();
         $post->user_id = $user_id;
-        $post->hillclimb_location_id = $location_id;
+        $post->mountain_id = $mountain_id;
         $post->comment = $request->input('comment');
         $post->image_path = $request->input('image_path');
         $post->evaluation_point = $request->input('evaluation_point');
@@ -75,7 +75,7 @@ class PostController extends Controller
         $user_id = $post->user_id;
         $user = User::findOrFail($user_id);
 
-        $mountain_id = $post->hillclimb_location_id;
+        $mountain_id = $post->mountain_id;
         $mountain = Mountains::findOrFail($mountain_id);
 
         return view('posts.show', compact('post','mountain','user'));
