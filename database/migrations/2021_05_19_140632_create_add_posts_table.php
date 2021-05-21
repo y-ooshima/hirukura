@@ -15,6 +15,7 @@ class CreateAddPostsTable extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             $table->integer('mountain_id')->unsigned()->default(0);
+            $table->dropColumn('hillclimb_location_id');
         });
     }
 
@@ -26,7 +27,8 @@ class CreateAddPostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('hillclimb_location_id');
+            $table->integer('hillclimb_location_id')->unsigned()->default(0);
+            $table->dropColumn('mountain_id');
         });
     }
 }
