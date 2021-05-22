@@ -59,7 +59,7 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect()->route('posts.show', ['id' => $post->id]);
+        return redirect()->route('review.show', ['id' => $post->id]);
     }
 
     /**
@@ -78,7 +78,7 @@ class PostController extends Controller
         $mountain_id = $post->mountain_id;
         $mountain = Mountains::findOrFail($mountain_id);
 
-        return view('posts.show', compact('post','mountain','user'));
+        return view('review.show', compact('post','mountain','user'));
     }
 
     /**
@@ -90,7 +90,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::findOrFail($id);
-        return view('posts.edit', compact('post'));
+        return view('review.edit', compact('post'));
     }
 
     /**
