@@ -45,12 +45,12 @@ class UserController extends Controller
         return redirect()->route('mypage');
     }
 
-    public function edit_password()
+    public function editPassword()
     {
         return view('users.edit_password');
     }
     
-    public function update_password(Request $request)
+    public function updatePassword(Request $request)
     {
         $user = Auth::user();
 

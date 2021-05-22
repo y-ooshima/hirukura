@@ -81,7 +81,7 @@ class PostController extends Controller
         return view('posts.show', compact('post','mountain','user'));
     }
 
-    public function users_show()
+    public function usersShow()
     {
         $user_id = Auth::user()->id;
         $posts = Post::where('user_id', $user_id)->get();
