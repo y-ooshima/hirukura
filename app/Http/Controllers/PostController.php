@@ -115,6 +115,7 @@ class PostController extends Controller
             'image_path' => $request->image_path,
             'evaluation_point' => $request->evaluation_point,
             'difficulty_point' => $request->difficulty_point,
+            'scenery_point' => $request->scenery_point,
             'road_surface_point' => $request->road_surface_point,
             'mileage' => $request->mileage,
             'running_time' => $request->running_time,

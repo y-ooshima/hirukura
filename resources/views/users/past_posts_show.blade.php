@@ -13,10 +13,9 @@
 
             <hr>
 
-            <ul class="nav navbar-right mx-2">
                 @foreach ($posts as $post)
                     <div class="row mt-5"> 
-                        <div class="col-8 card-deck mx-auto" style="width:auto">
+                        <div class="col-12 card-deck mx-auto" style="width:auto">
                             <div class="col card" style="width:15rem;">
                                 <h4 class="card-title text-center mt-3">ユーザー名: {{ $post->id }} </h4>
                                 <h4 class="card-title text-center">峠名: {{ $post->id }} </h4>
@@ -62,7 +61,6 @@
                         </div>
                     </div>
                 @endforeach
-            </ul>
 
         </div>
     </div>
