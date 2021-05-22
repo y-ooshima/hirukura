@@ -78,7 +78,7 @@ class PostController extends Controller
         $mountain_id = $post->mountain_id;
         $mountain = Mountains::findOrFail($mountain_id);
 
-        return view('review.show', compact('post','mountain','user'));
+        return view('users.past_review_edit', compact('post','mountain','user'));
     }
 
     /**
