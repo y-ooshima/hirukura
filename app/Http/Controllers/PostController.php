@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('review.create');
+        return view('posts.create');
     }
 
     /**
@@ -59,7 +59,7 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect()->route('review.show', ['id' => $post->id]);
+        return redirect()->route('posts.show', ['id' => $post->id]);
     }
 
     /**
@@ -78,7 +78,7 @@ class PostController extends Controller
         $mountain_id = $post->mountain_id;
         $mountain = Mountains::findOrFail($mountain_id);
 
-        return view('users.past_review_edit', compact('post','mountain','user'));
+        return view('users.past_posts_edit', compact('post','mountain','user'));
     }
 
     /**

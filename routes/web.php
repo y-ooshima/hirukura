@@ -12,31 +12,31 @@
 */
 
 Route::get('/', function () {
-    return view('review.index');
+    return view('posts.index');
 });
 
 // Route::get('/home', function () {
-//     return view('review.index');
+//     return view('posts.index');
 // });
 
 Route::get('/show', function () {
-    return view('review.show');
+    return view('posts.show');
 });
 
 Route::get('/edit', function () {
-    return view('review.edit');
+    return view('posts.edit');
 });
 
 // Route::get('/create', function () {
-//     return view('review.create');
+//     return view('posts.create');
 // });
 
 Route::get('/posts', 'PostController@index');
 Route::get('/posts/create', 'PostController@create');//->name('posts.create')
 Route::post('/posts', 'PostController@store');//->name('posts.store')
-Route::get('/posts/{id}', 'PostController@show')->name('review.show');
-Route::get('/posts/{id}/edit', 'PostController@edit')->name('review.edit');
-Route::put('/posts/{id}', 'PostController@update')->name('review.update');
+Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
+Route::get('/posts/{id}/edit', 'PostController@edit')->name('posts.edit');
+Route::put('/posts/{id}', 'PostController@update')->name('posts.update');
 Route::delete('/posts/{id}', 'PostController@destroy')->name('posts.destroy');
 
 Route::get('/users/profile', function () {
