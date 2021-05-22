@@ -78,7 +78,15 @@ class PostController extends Controller
         $mountain_id = $post->mountain_id;
         $mountain = Mountains::findOrFail($mountain_id);
 
-        return view('users.past_posts_edit', compact('post','mountain','user'));
+        return view('posts.show', compact('post','mountain','user'));
+    }
+
+    public function users_show()
+    {
+        $user_id = Auth::user()->id;
+        $posts = Post::where('user_id', $user_id)->get();
+
+        return view('users.past_posts_show', compact('posts'));
     }
 
     /**
@@ -113,7 +121,7 @@ class PostController extends Controller
             'climbing_day' => $request->climbing_day,
         ];
         Post::where('id', $id)->update($update);
-        return back();
+        return redirect('/mypage/show');
 
     }
 

@@ -41,38 +41,26 @@
                             <h5 class="card-subtitle text-muted">コメント</h5>
                             <p class="card-text">{{ $post->comment }}</p>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-6 text-center">
-                                <a type="button" class="btn btn-secondary" href="/posts/{{ $post->id }}/edit">編集</a>
-                            </div>
-                            <div class="col-6 text-center">
-                                <form action="/posts/{{ $post->id }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <input type="submit" class="btn btn-secondary" name="" value="削除">
-                                </form>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<hr>
+    <hr>
 
-<div class="row">
-    <div class="col-8 mx-auto">
-        <form>
-            <div class="form-group">
-                <label>コメント</label>
-                <textarea class="form-control" rows="3" with=80% placeholder="コメントする"></textarea>
-            </div>
-            <div class="text-center mb-5">
-                <button type="submit" class="btn btn-info text-white m-3">コメントを送信</button>
-            </div>
-        </form>
+    <div class="row">
+        <div class="col-8 mx-auto">
+            <form>
+                <div class="form-group">
+                    <label>コメント</label>
+                    <textarea class="form-control" rows="3" with=80% placeholder="コメントする"></textarea>
+                </div>
+                <div class="text-center mb-5">
+                    <button type="submit" class="btn btn-info text-white m-3">コメントを送信</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 

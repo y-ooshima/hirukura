@@ -37,7 +37,7 @@
 
             <div class="row mt-3">
                 <div class="col-12 text-center">
-                    <a type="button" class="btn btn-primary" href="{{ url('/users/edit') }}">過去投稿一覧へ</a>
+                    <a type="button" class="btn btn-primary" href="{{route('mypage.show')}}">過去投稿一覧へ</a>
                 </div>
             </div>
 

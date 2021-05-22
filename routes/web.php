@@ -65,6 +65,10 @@ Route::get('/re-enter', function () {
 
 Route::get('/mypage', 'UserController@mypage')->name('mypage');
 Route::get('/mypage/profile', 'UserController@edit')->name('mypage.edit');
+
+Route::get('/mypage/show', 'PostController@users_show')->name('mypage.show');
+Route::get('/mypage/show/{id}', 'PostController@edit');
+
 Route::put('users/mypage', 'UserController@update')->name('mypage.update');
 Route::get('users/mypage/password/edit', 'UserController@edit_password')->name('mypage.edit_password');
 Route::put('users/mypage/password', 'UserController@update_password')->name('mypage.update_password');
