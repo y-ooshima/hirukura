@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         $this->call([
 
-            hillclimb_locations_seeder::class, // 呼び出すように追加
+            MountainsSeeder::class, // 呼び出すように追加
             
         ]);
     }

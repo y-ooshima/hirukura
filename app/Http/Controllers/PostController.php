@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\User;
-use App\hillclimb_locations;
+use App\Mountains;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -27,8 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $hillclimb_locations = hillclimb_locations::all();
-        return view('review.create', compact('hillclimb_locations'));
+        return view('review.create');
     }
 
     /**
@@ -42,12 +41,12 @@ class PostController extends Controller
 
         $user_id = Auth::user()->id;
 
-        $location_name = $request->input('location_name');
-        $location_id = hillclimb_locations::where('name', $location_name)->value('id');
+        $mountain_name = $request->input('mountain_name');
+        $mountain_id = Mountains::where('name', $mountain_name)->value('id');
 
         $post = new Post();
         $post->user_id = $user_id;
-        $post->hillclimb_location_id = $location_id;
+        $post->mountain_id = $mountain_id;
         $post->comment = $request->input('comment');
         $post->image_path = $request->input('image_path');
         $post->evaluation_point = $request->input('evaluation_point');
@@ -76,10 +75,10 @@ class PostController extends Controller
         $user_id = $post->user_id;
         $user = User::findOrFail($user_id);
 
-        $hillclimb_location_id = $post->hillclimb_location_id;
-        $hillclimb_location = hillclimb_locations::findOrFail($hillclimb_location_id);
+        $mountain_id = $post->mountain_id;
+        $mountain = Mountains::findOrFail($mountain_id);
 
-        return view('posts.show', compact('post','hillclimb_location','user'));
+        return view('posts.show', compact('post','mountain','user'));
     }
 
     /**
@@ -127,20 +126,19 @@ class PostController extends Controller
     public function destroy($id)
     {
         Post::where('id', $id)->delete();
-        
-        $hillclimb_locations = hillclimb_locations::all();
-        return view('review.create', compact('hillclimb_locations'));
+
+        return redirect('/');
     }
 
-    public function locations_search(Request $request)
+    public function search(Request $request)
     {
 
         $data = $request->all();//データ読み取り
-        $location_name = $data['text'];
+        $prefecture_name = $data['text'];
 
-        $locations_name = hillclimb_locations::where('prefecture', $location_name)->pluck('name');
+        $mountain_name = Mountains::where('prefecture', $prefecture_name)->pluck('name');
         
-        return response()->json($locations_name);
+        return response()->json($mountain_name);
 
     }
 }

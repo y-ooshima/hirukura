@@ -15,7 +15,7 @@
                 <div class="col-8 card-deck mx-auto" style="width:auto">
                     <div class="col card" style="width:15rem;">
                         <h4 class="card-title text-center mt-3">ユーザー名: {{ $user->name }} </h4>
-                        <h4 class="card-title text-center">峠名: {{ $hillclimb_location->name }} </h4>
+                        <h4 class="card-title text-center">峠名: {{ $mountain->name }} </h4>
                         <img class="card-img-top d-block edit-img mx-auto" src="/img/free_icon.png" alt="Card image cap">
                         <div class="card-body">
                             <div class="row">
