@@ -86,7 +86,7 @@ class PostController extends Controller
         $user_id = Auth::user()->id;
         $posts = Post::where('user_id', $user_id)->get();
 
-        return view('users.past_posts_show', compact('posts'));
+        return view('users.past_show', compact('posts'));
     }
 
     /**
