@@ -11,27 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('posts.index');
-});
-
-// Route::get('/home', function () {
-//     return view('posts.index');
-// });
-
-Route::get('/show', function () {
-    return view('posts.show');
-});
-
-Route::get('/edit', function () {
-    return view('posts.edit');
-});
-
-// Route::get('/create', function () {
-//     return view('posts.create');
-// });
-
-Route::get('/posts', 'PostController@index');
+Route::get('/', 'PostController@index');
 Route::get('/posts/create', 'PostController@create');//->name('posts.create')
 Route::post('/posts', 'PostController@store');//->name('posts.store')
 Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
