@@ -97,8 +97,14 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+        $user_id = Auth::user()->id;
+
         $post = Post::findOrFail($id);
-        return view('users.edit', compact('post'));
+        if($user_id == $post->user_id){
+            return view('users.edit', compact('post'));
+        }else{
+            return redirect('/');
+        }
     }
 
     /**

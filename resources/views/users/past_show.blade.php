@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-6 text-center">
-                                        <a type="button" class="btn btn-secondary" href="/posts/{{ $post->id }}/edit">編集</a>
+                                        <a type="button" class="btn btn-secondary" href="/mypage/show/{{ $post->id }}/edit">編集</a>
                                     </div>
                                     <div class="col-6 text-center">
                                         <form action="/posts/{{ $post->id }}" method="POST">
