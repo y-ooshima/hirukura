@@ -4,7 +4,7 @@
             <div class="navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="text-secondary m-3" href="{{ url('/') }}">home</a>
+                        <a class="text-secondary m-3" href="{{ route('home') }}">home</a>
                     </li>
                     <li class="nav-item">
                         <a class="text-secondary m-3" href="#">お問い合わせ</a>

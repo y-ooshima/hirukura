@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', 'PostController@index');
-Route::get('/posts/create', 'PostController@create');//->name('posts.create')
+Route::get('/', 'PostController@index')->name('home');
+Route::get('/posts/create', 'PostController@create')->name('posts.create');
 Route::post('/posts', 'PostController@store');//->name('posts.store')
 Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
-//Route::get('/posts/{id}/edit', 'PostController@edit')->name('posts.edit');
+Route::get('/posts/{id}/edit', 'PostController@edit')->name('posts.edit');
 Route::put('/posts/{id}', 'PostController@update')->name('posts.update');
 Route::delete('/posts/{id}', 'PostController@destroy')->name('posts.destroy');
 
@@ -47,7 +47,7 @@ Route::get('/mypage', 'UserController@mypage')->name('mypage');
 Route::get('/mypage/profile', 'UserController@edit')->name('mypage.edit');
 
 Route::get('/mypage/show', 'PostController@usersShow')->name('mypage.show');
-Route::get('/mypage/show/{id}/edit', 'PostController@edit');
+//Route::get('/mypage/show/{id}/edit', 'PostController@edit');
 
 Route::put('users/mypage', 'UserController@update')->name('mypage.update');
 Route::get('users/mypage/password/edit', 'UserController@editPassword')->name('mypage.edit_password');
@@ -56,7 +56,7 @@ Route::delete('users/mypage/delete', 'UserController@destroy')->name('mypage.des
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/article/delete', 'UserController@delete')->name('article_delete');
 

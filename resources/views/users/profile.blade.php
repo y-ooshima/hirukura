@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <span>
-                <a href="{{ url('/mypage') }}">マイページ</a> > プロフィールの編集
+                <a href="{{ route('mypage') }}">マイページ</a> > プロフィールの編集
             </span>
 
             <h1 class="mt-3 mb-3">プロフィール編集</h1>

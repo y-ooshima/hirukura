@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <span>
-                <a href="{{ url('/mypage') }}">マイページ</a> > パスワードの変更
+                <a href="{{ route('mypage') }}">マイページ</a> > パスワードの変更
             </span>
 
             <h1 class="mt-3 mb-3">パスワードの変更</h1>

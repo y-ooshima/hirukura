@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 mb-5">
             <span>
-                <a href="{{ url('/mypage') }}">マイページ</a> > 過去記事一覧
+                <a href="{{ route('mypage') }}">マイページ</a> > 過去記事一覧
             </span>
 
             <h1 class="mt-3 mb-3">過去記事一覧</h1>
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-6 text-center">
-                                        <a type="button" class="btn btn-secondary" href="/mypage/show/{{ $post->id }}/edit">編集</a>
+                                        <a type="button" class="btn btn-secondary" href="{{ route('posts.edit',[$post->id]) }}">編集</a>
                                     </div>
                                     <div class="col-6 text-center">
                                         <form action="/posts/{{ $post->id }}" method="POST">

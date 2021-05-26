@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 mb-5">
             <span>
-                <a href="{{ url('/mypage') }}">マイページ</a> > <a href="{{ url('/users/edit') }}">過去記事一覧</a>> 過去投稿編集
+                <a href="{{ route('mypage') }}">マイページ</a> > <a href="{{ route('mypage.show') }}">過去記事一覧</a>> 過去投稿編集
             </span>
 
             <h1 class="mt-3 mb-3">過去投稿編集</h1>
