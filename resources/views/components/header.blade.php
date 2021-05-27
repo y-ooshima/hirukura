@@ -8,10 +8,10 @@
             @guest
             <ul class="nav navbar-right mx-4">
                 <li class="nav-item hidden-xs-down">
-                    <a class="nav-link p-1 active" href="{{ url('/login') }}">ログイン</a>
+                    <a class="nav-link p-1 active" href="{{ route('login') }}">ログイン</a>
                 </li>
                 <li class="nav-item hidden-xs-down">
-                    <a class="nav-link p-1" href="{{ url('/register') }}">新規登録</a>
+                    <a class="nav-link p-1" href="{{ route('register') }}">新規登録</a>
                 </li>
             </ul>
             @else

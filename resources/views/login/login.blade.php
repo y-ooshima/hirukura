@@ -31,7 +31,7 @@
             <div class="row  m-2">
                 <div class="col-12">
                     <div id="register-link" class="text-center">
-                        <a href="{{ url('/re-enter') }}" class="text-info">パスワードをお忘れの場合</a>
+                        <a href="{{ route('re-enter') }}" class="text-info">パスワードをお忘れの場合</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-12 my-3">
                     <div id="register-link" class="text-center mb-5">
-                        <a href="{{ url('/register') }}" class="text-info">新規登録はこちらから</a>
+                        <a href="{{ route('register') }}" class="text-info">新規登録はこちらから</a>
                     </div>
                 </div>
             </div>

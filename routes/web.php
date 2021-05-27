@@ -19,21 +19,21 @@ Route::get('/posts/{id}/edit', 'PostController@edit')->name('posts.edit');
 Route::put('/posts/{id}', 'PostController@update')->name('posts.update');
 Route::delete('/posts/{id}', 'PostController@destroy')->name('posts.destroy');
 
-Route::get('/users/profile', function () {
-    return view('users.profile');
-});
+// Route::get('/users/profile', function () {
+//     return view('users.profile');
+// });
 
-Route::get('/users/edit', function () {
-    return view('users.edit');
-});
+// Route::get('/users/edit', function () {
+//     return view('users.edit');
+// });
 
-Route::get('/users/create', function () {
-    return view('users.create');
-});
+// Route::get('/users/create', function () {
+//     return view('users.create');
+// });
 
 Route::get('/login', function () {
     return view('login.login');
-});
+})->name('login');
 
 Route::get('/register', function () {
     return view('login.register');
@@ -56,7 +56,7 @@ Route::delete('users/mypage/delete', 'UserController@destroy')->name('mypage.des
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PostController@index');
 
 Route::post('/article/delete', 'UserController@delete')->name('article_delete');
 
