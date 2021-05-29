@@ -97,6 +97,13 @@ class PostController extends Controller
         return view('users.past_show', compact('posts'));
     }
 
+    public function allShow()
+    {
+        $posts = Post::all();
+
+        return view('posts.all_show', compact('posts'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

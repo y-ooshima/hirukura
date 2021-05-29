@@ -73,7 +73,7 @@
 
         <div class="row postlist">
             <div class="col-12 text-center my-3">
-                <a type="button" class="btn btn-secondary" href="{{ url('/show') }}">投稿をもっと見る</a>
+                <a type="button" class="btn btn-secondary" href="{{route('posts.allShow')}}">投稿をもっと見る</a>
             </div>
         </div>
     
