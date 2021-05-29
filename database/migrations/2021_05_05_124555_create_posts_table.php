@@ -17,13 +17,13 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned()->default(0);
             $table->integer('hillclimb_location_id')->unsigned()->default(0);
-            $table->text('comment')->default('');
-            $table->string('image_path')->default('');
+            $table->text('comment');
+            $table->string('image_path');
             $table->integer('evaluation_point')->unsigned()->default(1);
             $table->integer('difficulty_point')->unsigned()->default(1);
             $table->integer('scenery_point')->unsigned()->default(1);
             $table->integer('road_surface_point')->unsigned()->default(1);
-            $table->text('mileage')->default('');
+            $table->text('mileage');
             $table->integer('running_time')->unsigned()->default(0);
             $table->date('climbing_day');
 

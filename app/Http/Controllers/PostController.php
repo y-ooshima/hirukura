@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('posts.index');
     }
 
     /**
@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('review.create');
+        return view('posts.create');
     }
 
     /**
@@ -81,6 +81,14 @@ class PostController extends Controller
         return view('posts.show', compact('post','mountain','user'));
     }
 
+    public function usersShow()
+    {
+        $user_id = Auth::user()->id;
+        $posts = Post::where('user_id', $user_id)->get();
+
+        return view('users.past_show', compact('posts'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -89,8 +97,14 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+        $user_id = Auth::user()->id;
+
         $post = Post::findOrFail($id);
-        return view('posts.edit', compact('post'));
+        if($user_id == $post->user_id){
+            return view('users.edit', compact('post'));
+        }else{
+            return redirect('/');
+        }
     }
 
     /**
@@ -107,13 +121,14 @@ class PostController extends Controller
             'image_path' => $request->image_path,
             'evaluation_point' => $request->evaluation_point,
             'difficulty_point' => $request->difficulty_point,
+            'scenery_point' => $request->scenery_point,
             'road_surface_point' => $request->road_surface_point,
             'mileage' => $request->mileage,
             'running_time' => $request->running_time,
             'climbing_day' => $request->climbing_day,
         ];
         Post::where('id', $id)->update($update);
-        return back();
+        return redirect('/mypage/show');
 
     }
 
