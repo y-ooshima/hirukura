@@ -17,7 +17,15 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $post = Post::latest()->first();
+
+        $user_id = $post->user_id;
+        $user = User::findOrFail($user_id);
+
+        $mountain_id = $post->mountain_id;
+        $mountain = Mountains::findOrFail($mountain_id);
+
+        return view('posts.index',compact('post','user','mountain'));
     }
 
     /**
@@ -87,6 +95,13 @@ class PostController extends Controller
         $posts = Post::where('user_id', $user_id)->get();
 
         return view('users.past_show', compact('posts'));
+    }
+
+    public function allShow()
+    {
+        $posts = Post::all();
+
+        return view('posts.all_show', compact('posts'));
     }
 
     /**

@@ -29,43 +29,43 @@
         <div class="row postlist"> 
             <div class="card-deck mt-3 mx-auto" style="width:auto">
                 <div class="card" style="width:15rem;">
-                <h5 class="card-title mt-3">ユーザー名: ** </h5>
+                <h5 class="card-title mt-3">ユーザー名:{{ $user->name }}</h5>
                     <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">峠名: ** </h5>
+                        <h5 class="card-title">峠名:{{ $mountain->name }}</h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
-                        <p class="card-text">...</p>
-                        <a href="{{ url('/edit') }}" class="card-link">詳細表示</a>
+                        <p class="card-text">{{ $post->comment }}</p>
+                        <a href="{{ route('posts.show',[$post->id]) }}" class="card-link">詳細表示</a>
                     </div>
                 </div>
                 <div class="card d-none d-sm-block" style="width:15rem;">
-                <h5 class="card-title mt-3">ユーザー名: ** </h5>
+                <h5 class="card-title mt-3">ユーザー名:{{ $user->name }}</h5>
                     <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">峠名: ** </h5>
+                        <h5 class="card-title">峠名:{{ $mountain->name }}</h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
-                        <p class="card-text">...</p>
-                        <a href="{{ url('/edit') }}" class="card-link">詳細表示</a>
+                        <p class="card-text">{{ $post->comment }}</p>
+                        <a href="{{ route('posts.show',[$post->id]) }}" class="card-link">詳細表示</a>
                     </div>
                 </div>
                 <div class="card d-none d-md-block" style="width:15rem;">
-                <h5 class="card-title mt-3">ユーザー名: ** </h5>
+                <h5 class="card-title mt-3">ユーザー名:{{ $user->name }}</h5>
                     <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">峠名: ** </h5>
+                        <h5 class="card-title">峠名:{{ $mountain->name }}</h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
-                        <p class="card-text">...</p>
-                        <a href="{{ url('/edit') }}" class="card-link">詳細表示</a>
+                        <p class="card-text">{{ $post->comment }}</p>
+                        <a href="{{ route('posts.show',[$post->id]) }}" class="card-link">詳細表示</a>
                     </div>
                 </div>
                 <div class="card d-none d-lg-block" style="width:15rem;">
-                <h5 class="card-title mt-3">ユーザー名: ** </h5>
+                <h5 class="card-title mt-3">ユーザー名:{{ $user->name }}</h5>
                     <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">峠名: ** </h5>
+                        <h5 class="card-title">峠名:{{ $mountain->name }}</h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
-                        <p class="card-text">...</p>
-                        <a href="{{ url('/edit') }}" class="card-link">詳細表示</a>
+                        <p class="card-text">{{ $post->comment }}</p>
+                        <a href="{{ route('posts.show',[$post->id]) }}" class="card-link">詳細表示</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
 
         <div class="row postlist">
             <div class="col-12 text-center my-3">
-                <a type="button" class="btn btn-secondary" href="{{ url('/show') }}">投稿をもっと見る</a>
+                <a type="button" class="btn btn-secondary" href="{{route('posts.allShow')}}">投稿をもっと見る</a>
             </div>
         </div>
     
