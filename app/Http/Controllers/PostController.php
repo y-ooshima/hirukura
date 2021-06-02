@@ -17,15 +17,17 @@ class PostController extends Controller
      */
     public function index()
     {
-        $post = Post::latest()->first();
+        //$post = Post::latest()->first();
+        $post = Post::latest()->take(4)->get();
 
-        $user_id = $post->user_id;
-        $user = User::findOrFail($user_id);
+        //$user_id = $post->user_id;
+        //$user = User::findOrFail($user_id);
 
-        $mountain_id = $post->mountain_id;
-        $mountain = Mountains::findOrFail($mountain_id);
+        //$mountain_id = $post->mountain_id;
+        //$mountain = Mountains::findOrFail($mountain_id);
 
-        return view('posts.index',compact('post','user','mountain'));
+        //return view('posts.index',compact('post','user','mountain'));
+        return view('posts.index',compact('post'));
     }
 
     /**

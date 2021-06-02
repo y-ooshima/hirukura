@@ -29,43 +29,43 @@
         <div class="row postlist"> 
             <div class="card-deck mt-3 mx-auto" style="width:auto">
                 <div class="card" style="width:15rem;">
-                <h5 class="card-title mt-3">ユーザー名:{{ $user->name }}</h5>
+                <h5 class="card-title mt-3">ユーザー名:{{ $post[0]->user_id }}</h5>
                     <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">峠名:{{ $mountain->name }}</h5>
+                        <h5 class="card-title">峠名:{{ $post[0]->mountain_id }}</h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
-                        <p class="card-text">{{ $post->comment }}</p>
-                        <a href="{{ route('posts.show',[$post->id]) }}" class="card-link">詳細表示</a>
+                        <p class="card-text">{{ $post[0]->comment }}</p>
+                        <a href="{{ route('posts.show',[$post[0]->id]) }}" class="card-link">詳細表示</a>
                     </div>
                 </div>
                 <div class="card d-none d-sm-block" style="width:15rem;">
-                <h5 class="card-title mt-3">ユーザー名:{{ $user->name }}</h5>
+                <h5 class="card-title mt-3">ユーザー名:{{ $post[1]->user_id }}</h5>
                     <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">峠名:{{ $mountain->name }}</h5>
+                        <h5 class="card-title">峠名:{{ $post[1]->mountain_id }}</h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
-                        <p class="card-text">{{ $post->comment }}</p>
-                        <a href="{{ route('posts.show',[$post->id]) }}" class="card-link">詳細表示</a>
+                        <p class="card-text">{{ $post[1]->comment }}</p>
+                        <a href="{{ route('posts.show',[$post[1]->id]) }}" class="card-link">詳細表示</a>
                     </div>
                 </div>
                 <div class="card d-none d-md-block" style="width:15rem;">
-                <h5 class="card-title mt-3">ユーザー名:{{ $user->name }}</h5>
+                <h5 class="card-title mt-3">ユーザー名:{{ $post[2]->user_id }}</h5>
                     <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">峠名:{{ $mountain->name }}</h5>
+                        <h5 class="card-title">峠名:{{ $post[2]->mountain_id }}</h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
-                        <p class="card-text">{{ $post->comment }}</p>
-                        <a href="{{ route('posts.show',[$post->id]) }}" class="card-link">詳細表示</a>
+                        <p class="card-text">{{ $post[2]->comment }}</p>
+                        <a href="{{ route('posts.show',[$post[2]->id]) }}" class="card-link">詳細表示</a>
                     </div>
                 </div>
                 <div class="card d-none d-lg-block" style="width:15rem;">
-                <h5 class="card-title mt-3">ユーザー名:{{ $user->name }}</h5>
+                <h5 class="card-title mt-3">ユーザー名:{{ $post[3]->user_id }}</h5>
                     <img class="card-img-top" src="/img/free_icon.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">峠名:{{ $mountain->name }}</h5>
+                        <h5 class="card-title">峠名:{{ $post[3]->mountain_id }}</h5>
                         <h6 class="card-subtitle text-muted">コメント</h6>
-                        <p class="card-text">{{ $post->comment }}</p>
-                        <a href="{{ route('posts.show',[$post->id]) }}" class="card-link">詳細表示</a>
+                        <p class="card-text">{{ $post[3]->comment }}</p>
+                        <a href="{{ route('posts.show',[$post[3]->id]) }}" class="card-link">詳細表示</a>
                     </div>
                 </div>
             </div>
